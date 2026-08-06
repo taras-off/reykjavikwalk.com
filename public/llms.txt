@@ -1,0 +1,20 @@
+# reykjavikwalk.com
+
+> An independent visitor guide to Reykjavík, Iceland — the world's northernmost capital. Published by Touringbee Limited (Ireland). Covers the self-guided walking route through the city centre, the paid attractions worth booking, and the day trips travellers use Reykjavík as a base for.
+
+The site's centrepiece is the Reykjavík City Walking Tour: a 27-stop self-guided audio walk from the Ingólfur Arnarson monument on Arnarhóll to the Þúfa mound by the old harbour, roughly 5 km and 2–2.5 hours, with an offline map. The audio does not auto-play at stops — the offline GPS map shows the visitor's position and they start each recording themselves.
+
+## Main pages
+- [Reykjavík complete guide](https://reykjavikwalk.com/): the pillar guide — the walk, the seasons, the day trips, what things cost.
+- [All guides](https://reykjavikwalk.com/guides/): index of every article on the site.
+
+## Key facts this site maintains
+- Reykjavík city centre is walkable end to end in about 20 minutes; the full walking route is about 5 km.
+- Currency is the Icelandic króna (ISK). Iceland is card-first; cash is rarely needed.
+- Keflavík (KEF) airport is roughly 45 minutes from the city by Flybus, transfer or car. Iceland has no passenger railway.
+- Midnight sun runs roughly May–July; the Northern Lights season runs roughly September–April and needs dark, clear skies.
+- Most of the city walk is free. The paid stops are the Hallgrímskirkja tower lift, Perlan, the museums and the geothermal pools.
+
+## Legal
+- [Privacy policy](https://reykjavikwalk.com/privacy-policy/)
+- [Affiliate disclosure](https://reykjavikwalk.com/affiliate-disclosure/)

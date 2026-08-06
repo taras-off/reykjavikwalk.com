@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found | reykjavikwalk.com</title>
+<meta name="description" content="Page not found on reykjavikwalk.com.">
+<link rel="canonical" href="https://reykjavikwalk.com/404.html">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<style>
+:root{
+  --ink:#0f1a2b;--ink-2:#41506a;--line:#e2e7ef;
+  --navy:#0b2545;--blue:#0a5cb8;--blue-d:#084a94;--teal:#12a5a0;
+  --sand:#f6f4f0;--white:#fff;--radius:14px;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(30px,5.2vw,50px);font-weight:800}
+h2{font-size:clamp(24px,3.4vw,34px);font-weight:800}
+h3{font-size:20px;font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.lead{font-size:19px;color:var(--ink-2)}
+
+/* ---------- Bókun CLS fix (§4B) ---------- */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:saturate(1.6) blur(8px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:800;font-size:18px;letter-spacing:-.02em}
+.brand:hover{text-decoration:none}
+.brand img{width:34px;height:34px;border-radius:50%}
+.brand b{font-weight:800}.brand span{font-weight:500;color:var(--teal)}
+.menu{position:relative;margin-left:auto}
+.menu summary{list-style:none;cursor:pointer;font-weight:600;color:var(--ink);padding:8px 10px;border-radius:8px}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary:hover{background:var(--sand)}
+.menu .drop{position:absolute;right:0;top:44px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px rgba(15,26,43,.14);min-width:280px;padding:8px;max-height:70vh;overflow:auto}
+.menu .drop a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);font-size:15px}
+.menu .drop a:hover{background:var(--sand);text-decoration:none}
+.menu .drop .all{font-weight:700;color:var(--blue);border-top:1px solid var(--line);margin-top:6px;padding-top:12px}
+.lang{display:flex;gap:2px;flex-wrap:wrap}
+.lang a{font-size:12px;font-weight:700;color:var(--ink-2);padding:5px 6px;border-radius:6px}
+.lang a:hover{background:var(--sand);text-decoration:none}
+.lang a.on{background:var(--navy);color:#fff}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:11px;font-weight:700;font-size:16px;background:var(--blue);color:#fff;border:2px solid var(--blue);transition:.15s;text-align:center}
+.btn:hover{background:var(--blue-d);border-color:var(--blue-d);text-decoration:none;color:#fff}
+.btn.dark{background:#fff;color:var(--navy);border-color:#fff}
+.btn.dark:hover{background:#eef2f7;color:var(--navy);border-color:#eef2f7}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.btn.ghost:hover{background:rgba(255,255,255,.14);color:#fff;border-color:#fff}
+.btn.outline{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn.outline:hover{background:var(--blue);color:#fff}
+.btn.block{width:100%}
+.btn.sm{padding:9px 15px;font-size:14px;border-radius:9px}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;background:var(--navy)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(6,20,38,.86) 0%,rgba(6,20,38,.66) 46%,rgba(6,20,38,.28) 100%)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .wrap{position:relative;z-index:1;padding-top:76px;padding-bottom:76px;max-width:880px}
+.chip{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:18px}
+.hero p.sub{font-size:19px;color:#dbe4f0;max-width:660px}
+
+/* ---------- generic blocks ---------- */
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.soft{background:var(--sand)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.card .pad{padding:20px}
+.card h3{margin-bottom:.35em}
+.card p{color:var(--ink-2);font-size:15.5px;margin-bottom:.8em}
+
+/* audio preview */
+.player{background:var(--navy);color:#fff;border-radius:var(--radius);padding:22px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.player audio{flex:1 1 320px;min-width:260px;height:42px}
+.player .lbl{font-weight:700}
+.player .mut{color:#c3d0e2;font-size:14.5px;margin:0}
+
+/* highlights */
+.hl{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:26px}
+.hl div{background:var(--sand);border-radius:12px;padding:16px 18px;font-size:15.5px;font-weight:600}
+.hl span{display:block;color:var(--teal);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+
+/* product card */
+.product{border:2px solid var(--navy);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.product .ph{background:var(--navy)}
+.product .ph img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.product .bd{padding:28px}
+.price{font-size:34px;font-weight:800;color:var(--navy);line-height:1}
+.price small{font-size:15px;font-weight:600;color:var(--ink-2);display:block;margin-top:6px}
+.ticks{list-style:none;padding:0;margin:18px 0}
+.ticks li{padding-left:28px;position:relative;margin-bottom:9px;font-size:15.5px}
+.ticks li:before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--teal)}
+.ticks li:after{content:"";position:absolute;left:4.5px;top:10px;width:4px;height:7px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(42deg)}
+
+/* tiles */
+.tile{position:relative;border-radius:var(--radius);overflow:hidden;min-height:230px;display:flex;align-items:flex-end;color:#fff}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .t{position:relative;padding:26px 18px 18px;background:linear-gradient(rgba(8,18,34,0),rgba(8,18,34,.55) 42%,rgba(8,18,34,.92));width:100%}
+.tile h3{margin:0 0 3px;font-size:18px}
+.tile p{margin:0;font-size:14px;color:#dbe4f0}
+
+/* steps */
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.step b{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-size:16px;margin-bottom:12px}
+.step p{font-size:15.5px;color:var(--ink-2);margin:0}
+
+/* facts */
+.facts{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.facts{grid-template-columns:repeat(2,1fr)}}
+.facts div{background:#fff;padding:18px 20px}
+.facts .k{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);font-weight:700;margin-bottom:5px}
+.facts .v{font-weight:600;font-size:15.5px}
+
+/* ticket box / callout */
+.ticketbox{border:1px solid var(--line);border-left:5px solid var(--teal);background:var(--sand);border-radius:12px;padding:22px 24px;margin:26px 0}
+.ticketbox h3{margin-bottom:.4em}
+.ticketbox p{color:var(--ink-2);font-size:15.5px}
+
+/* partners */
+.noimg{height:180px;display:flex;align-items:flex-end;padding:16px 18px;color:#fff;font-weight:700;font-size:15px;background:linear-gradient(135deg,var(--navy),#14507f 55%,var(--teal))}
+.plabel{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:800;margin-bottom:6px}
+.meta{font-size:14px;color:var(--ink-2)}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;gap:12px;align-items:flex-start}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:before{content:"+";color:var(--teal);font-weight:800;font-size:21px;line-height:1.1}
+.faq details[open] summary:before{content:"–"}
+.faq p{margin:12px 0 0 24px;color:var(--ink-2);font-size:16px}
+
+/* author */
+.author{display:flex;gap:22px;align-items:flex-start;background:var(--sand);border-radius:var(--radius);padding:26px}
+.author .av{width:96px;height:96px;border-radius:50%;flex:0 0 96px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;overflow:hidden}
+.author p{font-size:15.5px;color:var(--ink-2)}
+
+/* final cta */
+.final{background:var(--navy);color:#fff;border-radius:18px;padding:38px 32px;text-align:center}
+.final p{color:#dbe4f0;max-width:640px;margin:0 auto 4px}
+
+/* footer */
+footer{background:#08182a;color:#b9c7da;padding:48px 0 110px;font-size:15px;margin-top:20px}
+footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.09em;margin:0 0 12px}
+footer a{color:#b9c7da}
+footer a:hover{color:#fff}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:8px}
+.disc{border-top:1px solid #16304a;margin-top:32px;padding-top:20px;font-size:13.5px;color:#8296ad}
+
+/* sticky buy bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(11,37,69,.97);backdrop-filter:blur(8px);color:#fff;padding:11px 0;transform:translateY(110%);transition:transform .25s}
+.sticky.on{transform:none}
+.sticky .wrap{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.sticky .txt{font-size:15px;font-weight:600}
+.sticky .txt small{display:block;font-weight:500;color:#bdcbde;font-size:13px}
+@media(max-width:720px){
+  .product{grid-template-columns:1fr}
+  .product .ph img{min-height:220px}
+  .sticky .txt small{display:none}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/img/logo.webp" width="34" height="34" alt="reykjavikwalk.com logo"><b>reykjavik</b><span>walk</span></a>
+    <details class="menu">
+      <summary>Guides ▾</summary>
+      <div class="drop">
+        <a href="/golden-circle/">Golden Circle from Reykjavik</a>
+        <a href="/blue-lagoon/">Blue Lagoon: tickets &amp; transfers</a>
+        <a href="/northern-lights-reykjavik/">Northern Lights in Reykjavik</a>
+        <a href="/hallgrimskirkja/">Hallgrímskirkja &amp; the tower view</a>
+        <a href="/keflavik-airport-to-reykjavik/">Keflavík airport to the city</a>
+        <a href="/sky-lagoon/">Sky Lagoon</a>
+        <a href="/whale-watching-reykjavik/">Whale watching &amp; puffins</a>
+        <a href="/best-time-to-visit-reykjavik/">Best time to visit</a>
+        <a href="/one-day-in-reykjavik/">One day in Reykjavik</a>
+        <a href="/things-to-do-in-reykjavik/">Best things to do</a>
+        <a class="all" href="/guides/">All guides →</a>
+      </div>
+    </details>
+    <nav class="lang"><a class="on" href="/">EN</a><a href="/fr/">FR</a><a href="/de/">DE</a><a href="/es/">ES</a><a href="/it/">IT</a><a href="/pt/">PT</a><a href="/pl/">PL</a><a href="/ru/">RU</a></nav>
+  </div>
+</header>
+<main>
+<section><div class="wrap" style="max-width:720px;text-align:center;padding:40px 20px">
+<h1 style="font-size:clamp(30px,5vw,46px)">This page isn't here</h1>
+<p class="lead">Either it hasn't been published yet, or the link is wrong. Both are fixable.</p>
+<div class="btnrow" style="justify-content:center">
+<a class="btn" href="/">Reykjavik complete guide</a>
+<a class="btn outline" href="/guides/">All guides</a>
+</div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="grid g4">
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/one-day-in-reykjavik/">One day in Reykjavik</a></li>
+          <li><a href="/golden-circle/">Golden Circle</a></li>
+          <li><a href="/northern-lights-reykjavik/">Northern Lights</a></li>
+          <li><a href="/guides/">All guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The audio guide</h4>
+        <ul>
+          <li><a href="#audio">Reykjavík City Walking Tour</a></li>
+          <li><a href="https://touringbee.com/shop-tbee/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=landing&amp;utm_content=footer" target="_blank" rel="noopener">All TouringBee tours</a></li>
+          <li><a href="https://touringbee.com/terms-and-conditions-of-use/" target="_blank" rel="noopener">Terms &amp; conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy policy</a></li>
+          <li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li>
+          <li><a href="mailto:info@touringbee.com">info@touringbee.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Languages</h4>
+        <ul>
+          <li><a href="/">English</a> · <a href="/fr/">Français</a> · <a href="/de/">Deutsch</a></li>
+          <li><a href="/es/">Español</a> · <a href="/it/">Italiano</a> · <a href="/pt/">Português</a></li>
+          <li><a href="/pl/">Polski</a> · <a href="/ru/">Русский</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disc">reykjavikwalk.com is published by Touringbee Limited (Ireland, company no. 660321). Some links on this site are affiliate links — if you book through them we may earn a commission at no extra cost to you. See our <a href="/affiliate-disclosure/">affiliate disclosure</a>. Prices and opening hours change; always confirm on the official site before you travel.</p>
+  </div>
+</footer>
+<script>(function(){var s=document.getElementById('sticky');if(!s)return;window.addEventListener('scroll',function(){s.classList.toggle('on',window.scrollY>600);},{passive:true});})();</script>
+</body>
+</html>

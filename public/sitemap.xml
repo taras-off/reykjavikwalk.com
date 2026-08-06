@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://reykjavikwalk.com/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reykjavikwalk.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reykjavikwalk.com/"/>
+  </url>
+  <url><loc>https://reykjavikwalk.com/guides/</loc><lastmod>2026-08-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://reykjavikwalk.com/privacy-policy/</loc><lastmod>2026-08-06</lastmod><priority>0.2</priority></url>
+  <url><loc>https://reykjavikwalk.com/affiliate-disclosure/</loc><lastmod>2026-08-06</lastmod><priority>0.2</priority></url>
+</urlset>
