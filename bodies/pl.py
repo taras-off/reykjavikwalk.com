@@ -186,7 +186,7 @@ BODY_TMPL = """
           <li><strong>Jedna płatność.</strong> Bez grupy, bez rozkładu i bez przewodnika, który na ciebie czeka</li>
         </ul>
         <a {BUY} style="width:100%">Przejdź Reykjavik z audioprzewodnikiem</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener">{OPENSHOP}</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener" data-no-widget>{OPENSHOP}</a>.</p>
       </div>
     </div>
   </div>

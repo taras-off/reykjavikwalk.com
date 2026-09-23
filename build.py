@@ -143,7 +143,9 @@ def shell(lang, c, *, path, title, desc, body, extra_css="", head_extra="",
 (function(){{
   var UUID='{BOKUN_UUID}', PID='{BOKUN_PID}';
   var WIDGET='https://widgets.bokun.io/online-sales/'+UUID+'/experience/'+PID;
-  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"]';
+  /* кнопки, ссылки на товар в магазине и любые текстовые ссылки «аудиогид» (#audio).
+     data-no-widget — единственный опт-аут: запасной выход в магазин. */
+  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"], a[href$="#audio"]';
   var loaded=0;
   function load(){{
     if(loaded)return; loaded=1;
@@ -163,6 +165,7 @@ def shell(lang, c, *, path, title, desc, body, extra_css="", head_extra="",
     if(!el) return;
     /* движок уже повесил свой обработчик на эту кнопку — не мешаем */
     if(el.getAttribute('data-bokun-widget-loaded')==='true') return;
+    if(el.hasAttribute('data-no-widget')) return;
     ev.preventDefault(); ev.stopPropagation();
     el.classList.add('is-bokun-loading');
     load();
@@ -342,7 +345,7 @@ def landing(lang, c):
         <div class="price">{L["price_display"]}<small>{L["price_sub"]}</small></div>
         <ul class="ticks">{ticks}</ul>
         <a {bokun_attrs()} style="width:100%">{L["buy"]}</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">{L["checkout_note"]} <a href="{tb("product/reykjavik-city-walking-tour", "product_card")}" rel="noopener">{L["open_shop"]}</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">{L["checkout_note"]} <a href="{tb("product/reykjavik-city-walking-tour", "product_card")}" rel="noopener" data-no-widget>{L["open_shop"]}</a>.</p>
       </div>
     </div>
   </div>

@@ -182,7 +182,7 @@ BODY_TMPL = """
           <li><strong>Un pagamento solo.</strong> Nessun gruppo, nessun orario, nessuna guida che ti aspetta</li>
         </ul>
         <a {BUY} style="width:100%">Fai Reykjavik con l'audioguida</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener">{OPENSHOP}</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener" data-no-widget>{OPENSHOP}</a>.</p>
       </div>
     </div>
   </div>

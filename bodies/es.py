@@ -182,7 +182,7 @@ BODY_TMPL = """
           <li><strong>Un solo pago.</strong> Sin grupo, sin horario y sin un guía esperándote</li>
         </ul>
         <a {BUY} style="width:100%">Recorrer Reikiavik con la audioguía</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener">{OPENSHOP}</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener" data-no-widget>{OPENSHOP}</a>.</p>
       </div>
     </div>
   </div>

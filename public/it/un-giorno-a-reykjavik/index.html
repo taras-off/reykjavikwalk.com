@@ -404,7 +404,7 @@ table.tbl th{background:var(--sand);font-weight:700}
           <li><strong>Un pagamento solo.</strong> Nessun gruppo, nessun orario, nessuna guida che ti aspetta</li>
         </ul>
         <a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141" data-src="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141?partialView=1" style="width:100%">Fai Reykjavik con l'audioguida</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">Pagamento sicuro su questa pagina. Preferisci lo shop? <a href="https://touringbee.com/product/reykjavik-city-walking-tour/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=article&amp;utm_content=article_card" rel="noopener">Aprilo su TouringBee</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">Pagamento sicuro su questa pagina. Preferisci lo shop? <a href="https://touringbee.com/product/reykjavik-city-walking-tour/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=article&amp;utm_content=article_card" rel="noopener" data-no-widget>Aprilo su TouringBee</a>.</p>
       </div>
     </div>
   </div>
@@ -512,7 +512,9 @@ table.tbl th{background:var(--sand);font-weight:700}
 (function(){
   var UUID='5861f2ab-0e3f-4a33-a6ef-0adde2b83f67', PID='1250141';
   var WIDGET='https://widgets.bokun.io/online-sales/'+UUID+'/experience/'+PID;
-  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"]';
+  /* кнопки, ссылки на товар в магазине и любые текстовые ссылки «аудиогид» (#audio).
+     data-no-widget — единственный опт-аут: запасной выход в магазин. */
+  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"], a[href$="#audio"]';
   var loaded=0;
   function load(){
     if(loaded)return; loaded=1;
@@ -532,6 +534,7 @@ table.tbl th{background:var(--sand);font-weight:700}
     if(!el) return;
     /* движок уже повесил свой обработчик на эту кнопку — не мешаем */
     if(el.getAttribute('data-bokun-widget-loaded')==='true') return;
+    if(el.hasAttribute('data-no-widget')) return;
     ev.preventDefault(); ev.stopPropagation();
     el.classList.add('is-bokun-loading');
     load();

@@ -259,7 +259,7 @@ footer li{margin-bottom:8px}
         <div class="price">9,99 €<small>Pagamento unico · nessun abbonamento · accesso 1 anno</small></div>
         <ul class="ticks"><li><strong>27 tappe audio</strong>: Hallgrímskirkja, il Sun Voyager, Harpa, il museo del punk, l'ICGV Óðinn, Þúfa e altro</li><li><strong>Mappa GPS offline</strong> che mostra dove sei; la registrazione la avvii tu quando arrivi sul posto</li><li><strong>Illustrazioni</strong> per capire quale edificio hai davanti</li><li><strong>Consegna immediata</strong>: la mail di attivazione arriva in pochi minuti</li><li><strong>Nessun gruppo, nessun orario</strong>: parti il giorno e l'ora che vuoi</li></ul>
         <a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141" data-src="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141?partialView=1" style="width:100%">Acquista l'audioguida — 9,99 €</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">Pagamento sicuro su questa pagina. Preferisci lo shop? <a href="https://touringbee.com/product/reykjavik-city-walking-tour/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=landing&amp;utm_content=product_card" rel="noopener">Aprilo su TouringBee</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">Pagamento sicuro su questa pagina. Preferisci lo shop? <a href="https://touringbee.com/product/reykjavik-city-walking-tour/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=landing&amp;utm_content=product_card" rel="noopener" data-no-widget>Aprilo su TouringBee</a>.</p>
       </div>
     </div>
   </div>
@@ -444,7 +444,9 @@ footer li{margin-bottom:8px}
 (function(){
   var UUID='5861f2ab-0e3f-4a33-a6ef-0adde2b83f67', PID='1250141';
   var WIDGET='https://widgets.bokun.io/online-sales/'+UUID+'/experience/'+PID;
-  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"]';
+  /* кнопки, ссылки на товар в магазине и любые текстовые ссылки «аудиогид» (#audio).
+     data-no-widget — единственный опт-аут: запасной выход в магазин. */
+  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"], a[href$="#audio"]';
   var loaded=0;
   function load(){
     if(loaded)return; loaded=1;
@@ -464,6 +466,7 @@ footer li{margin-bottom:8px}
     if(!el) return;
     /* движок уже повесил свой обработчик на эту кнопку — не мешаем */
     if(el.getAttribute('data-bokun-widget-loaded')==='true') return;
+    if(el.hasAttribute('data-no-widget')) return;
     ev.preventDefault(); ev.stopPropagation();
     el.classList.add('is-bokun-loading');
     load();

@@ -186,7 +186,7 @@ BODY_TMPL = """
           <li><strong>Один платёж.</strong> Ни группы, ни расписания, ни гида, который вас ждёт</li>
         </ul>
         <a {BUY} style="width:100%">Пройти Рейкьявик с аудиогидом</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener">{OPENSHOP}</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">{CHECKOUTNOTE} <a href="{TBPRODUCT}" rel="noopener" data-no-widget>{OPENSHOP}</a>.</p>
       </div>
     </div>
   </div>
