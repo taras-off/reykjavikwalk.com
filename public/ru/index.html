@@ -202,6 +202,9 @@ footer li{margin-bottom:8px}
   .sticky .txt small{display:none}
   section{padding:44px 0}
 }
+
+/* состояние ожидания движка Bókun */
+.is-bokun-loading{opacity:.6;pointer-events:none;position:relative}
 </style>
 </head>
 <body>
@@ -210,7 +213,7 @@ footer li{margin-bottom:8px}
     <a class="brand" href="/ru/"><img src="/img/logo.webp" width="34" height="34" alt="reykjavikwalk.com"><b>reykjavik</b><span>walk</span></a>
     <details class="menu">
       <summary>Гиды ▾</summary>
-      <div class="drop"><a href="/ru/zolotoe-kolco-islandii/">Золотое кольцо из Рейкьявика</a><a href="/ru/blue-lagoon/">Голубая лагуна: билеты и трансфер</a><a href="/ru/severnoe-siyanie-reykjavik/">Северное сияние в Рейкьявике</a><a href="/ru/hallgrimskirkja/">Хатльгримскиртья и башня</a><a href="/ru/aeroport-keflavik-reykjavik/">Из аэропорта Кеблавик в город</a><a href="/ru/sky-lagoon/">Sky Lagoon</a><a href="/ru/kity-reykjavik/">Киты и тупики</a><a href="/ru/kogda-ehat-v-reykjavik/">Когда ехать в Рейкьявик</a><a href="/ru/odin-den-v-reykjavike/">Один день в Рейкьявике</a><a href="/ru/chto-posmotret-v-reykjavike/">Что посмотреть в Рейкьявике</a><a class="all" href="/ru/gidy/">Все гиды →</a></div>
+      <div class="drop"><a href="/ru/odin-den-v-reykjavike/">Один день в Рейкьявике</a><a class="all" href="/ru/gidy/">Все гиды →</a></div>
     </details>
     <nav class="lang" aria-label="Language"><a href="/">EN</a><a href="/fr/">FR</a><a href="/de/">DE</a><a href="/es/">ES</a><a href="/it/">IT</a><a href="/pt/">PT</a><a href="/pl/">PL</a><a class="on" href="/ru/">RU</a></nav>
   </div>
@@ -250,13 +253,13 @@ footer li{margin-bottom:8px}
     <h2>Reykjavík City Walking Tour</h2>
     <p class="lead" style="max-width:720px">Написан журналистами и историками, озвучен голосом Й'Оуна — рыбака из Рейкьявика, у которого есть время до следующего выхода в море.</p>
     <div class="product" style="margin-top:26px">
-      <div class="ph"><img src="/img/product-reykjavik.webp" width="1200" height="800" loading="lazy" alt="Приложение TouringBee с маршрутом по Рейкьявику на фоне Хатльгримскиртьи"></div>
+      <div class="ph"><img src="/img/product-reykjavik.webp" width="1200" height="800" loading="lazy" alt="Приложение TouringBee с маршрутом по Рейкьявику на фоне Хатльгримскиркьи"></div>
       <div class="bd">
         <div class="rate"><span class="stars" role="img" aria-label="Оценка 4,7 из 5"><svg class="st" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M10 1.6l2.47 5.3 5.53.66-4.1 3.9 1.09 5.94L10 14.5l-4.99 2.9L6.1 11.46 2 7.56l5.53-.66L10 1.6z"/></svg><svg class="st" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M10 1.6l2.47 5.3 5.53.66-4.1 3.9 1.09 5.94L10 14.5l-4.99 2.9L6.1 11.46 2 7.56l5.53-.66L10 1.6z"/></svg><svg class="st" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M10 1.6l2.47 5.3 5.53.66-4.1 3.9 1.09 5.94L10 14.5l-4.99 2.9L6.1 11.46 2 7.56l5.53-.66L10 1.6z"/></svg><svg class="st" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M10 1.6l2.47 5.3 5.53.66-4.1 3.9 1.09 5.94L10 14.5l-4.99 2.9L6.1 11.46 2 7.56l5.53-.66L10 1.6z"/></svg><svg class="st" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M10 1.6l2.47 5.3 5.53.66-4.1 3.9 1.09 5.94L10 14.5l-4.99 2.9L6.1 11.46 2 7.56l5.53-.66L10 1.6z"/></svg></span><b>4,7</b> средняя оценка путешественников</div>
         <div class="price">9,99 €<small>Один платёж · без подписки · доступ на год</small></div>
-        <ul class="ticks"><li><strong>27 аудиоточек</strong>: Хатльгримскиртья, Sun Voyager, Harpa, музей панка, ICGV Óðinn, Тюва и другие</li><li><strong>Офлайн-карта GPS</strong> показывает, где вы, — запись вы включаете сами, когда дошли до места</li><li><strong>Иллюстрации</strong>, чтобы понимать, на какое здание вы смотрите</li><li><strong>Мгновенная доставка</strong> — письмо с активацией приходит за несколько минут</li><li><strong>Ни группы, ни расписания</strong> — начинаете в любой день и в любой час</li></ul>
+        <ul class="ticks"><li><strong>27 аудиоточек</strong>: Хатльгримскиркья, Sun Voyager, Harpa, музей панка, ICGV Óðinn, Тюва и другие</li><li><strong>Офлайн-карта GPS</strong> показывает, где вы, — запись вы включаете сами, когда дошли до места</li><li><strong>Иллюстрации</strong>, чтобы понимать, на какое здание вы смотрите</li><li><strong>Мгновенная доставка</strong> — письмо с активацией приходит за несколько минут</li><li><strong>Ни группы, ни расписания</strong> — начинаете в любой день и в любой час</li></ul>
         <a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141" data-src="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141?partialView=1" style="width:100%">Купить аудиогид — 9,99 €</a>
-        <p class="meta" style="margin:12px 0 0;text-align:center">Безопасная оплата на этой странице. Удобнее в магазине? <a href="https://touringbee.com/product/reykjavik-city-walking-tour/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=landing&amp;utm_content=product_card" target="_blank" rel="noopener">Открыть на TouringBee</a>.</p>
+        <p class="meta" style="margin:12px 0 0;text-align:center">Безопасная оплата на этой странице. Удобнее в магазине? <a href="https://touringbee.com/product/reykjavik-city-walking-tour/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=landing&amp;utm_content=product_card" rel="noopener">Открыть на TouringBee</a>.</p>
       </div>
     </div>
   </div>
@@ -275,7 +278,7 @@ footer li{margin-bottom:8px}
         <p><a href="/ru/kogda-ehat-v-reykjavik/">Когда ехать →</a></p></div>
     </div>
     <div class="ticketbox">
-      <h3>Почти всё это бесплатно</h3><p>Сама прогулка бесплатна. Центр Рейкьявика — музей под открытым небом: муралы, порт, пруд, парламент, радужная улица. Платить приходится за немногое: лифт на башню Хатльгримскиртьи, Перлан, музеи и геотермальные бассейны — несколько сотен крон, и они себя оправдывают. Деньги приберегите для вылазок за город. Дорогой Исландию делают именно они.</p>
+      <h3>Почти всё это бесплатно</h3><p>Сама прогулка бесплатна. Центр Рейкьявика — музей под открытым небом: муралы, порт, пруд, парламент, радужная улица. Платить приходится за немногое: лифт на башню Хатльгримскиркьи, Перлан, музеи и геотермальные бассейны — несколько сотен крон, и они себя оправдывают. Деньги приберегите для вылазок за город. Дорогой Исландию делают именно они.</p>
       <a class="btn outline sm" href="/ru/ceny-v-reykjavike/">Во сколько обходится Рейкьявик</a>
     </div>
     <div class="grid g2" style="align-items:center;margin-top:34px">
@@ -293,7 +296,7 @@ footer li{margin-bottom:8px}
   <div class="wrap">
     <h2>Что вы увидите по пути</h2>
     <p class="lead" style="max-width:700px">Шесть точек из двадцати семи. Остальные встретятся по дороге.</p>
-    <div class="grid g3" style="margin-top:26px"><a class="tile" href="/ru/hallgrimskirkja/"><img src="/img/tile-hallgrimskirkja.webp" width="800" height="600" loading="lazy" alt="Церковь Хатльгримскиртья снизу, исландский флаг на ветру"><div class="t"><h3>Хатльгримскиртья</h3><p>Церковь из базальтовых колонн и лучший вид на город с её башни</p></div></a><a class="tile" href="/ru/raduzhnaya-ulica-laugavegur/"><img src="/img/tile-rainbow-street.webp" width="800" height="600" loading="lazy" alt="Скоулавёрдюстигюр — улица, раскрашенная радугой, поднимается к Хатльгримскиртье"><div class="t"><h3>Радужная улица</h3><p>Скоулавёрдюстигюр: покрасили к прайду и больше не смывали</p></div></a><a class="tile" href="/ru/harpa/"><img src="/img/tile-harpa.webp" width="800" height="600" loading="lazy" alt="Стеклянный сотовый фасад концертного зала Harpa в сумерках"><div class="t"><h3>Harpa</h3><p>Стеклянные соты, построенные сквозь кризис, который чуть их не похоронил</p></div></a><a class="tile" href="/ru/staryy-port-reykjavika/"><img src="/img/tile-old-harbour.webp" width="800" height="600" loading="lazy" alt="Рыболовные суда у старого порта Рейкьявика"><div class="t"><h3>Старый порт</h3><p>Отсюда уходят катера к китам — и здесь выиграли тресковые войны</p></div></a><a class="tile" href="/ru/chto-posmotret-v-reykjavike/"><img src="/img/tile-whales.webp" width="800" height="600" loading="lazy" alt="Киты в натуральную величину в синей подсветке на выставке Whales of Iceland"><div class="t"><h3>Whales of Iceland</h3><p>Двадцать три кита в натуральную величину в тёмном ангаре у воды</p></div></a><a class="tile" href="/ru/chto-posmotret-v-reykjavike/"><img src="/img/tile-thufa.webp" width="800" height="600" loading="lazy" alt="Тюва — спиральный холм, покрытый травой, с рыбной сушильней на вершине"><div class="t"><h3>Тюва</h3><p>Конец маршрута: спиральный холм с рыбной сушильней наверху</p></div></a></div>
+    <div class="grid g3" style="margin-top:26px"><a class="tile" href="/ru/hallgrimskirkja/"><img src="/img/tile-hallgrimskirkja.webp" width="800" height="600" loading="lazy" alt="Церковь Хатльгримскиркья снизу, исландский флаг на ветру"><div class="t"><h3>Хатльгримскиркья</h3><p>Церковь из базальтовых колонн и лучший вид на город с её башни</p></div></a><a class="tile" href="/ru/raduzhnaya-ulica-laugavegur/"><img src="/img/tile-rainbow-street.webp" width="800" height="600" loading="lazy" alt="Скоулавёрдюстигюр — улица, раскрашенная радугой, поднимается к Хатльгримскиркье"><div class="t"><h3>Радужная улица</h3><p>Скоулавёрдюстигюр: покрасили к прайду и больше не смывали</p></div></a><a class="tile" href="/ru/harpa/"><img src="/img/tile-harpa.webp" width="800" height="600" loading="lazy" alt="Стеклянный сотовый фасад концертного зала Harpa в сумерках"><div class="t"><h3>Harpa</h3><p>Стеклянные соты, построенные сквозь кризис, который чуть их не похоронил</p></div></a><a class="tile" href="/ru/staryy-port-reykjavika/"><img src="/img/tile-old-harbour.webp" width="800" height="600" loading="lazy" alt="Рыболовные суда у старого порта Рейкьявика"><div class="t"><h3>Старый порт</h3><p>Отсюда уходят катера к китам — и здесь выиграли тресковые войны</p></div></a><a class="tile" href="/ru/chto-posmotret-v-reykjavike/"><img src="/img/tile-whales.webp" width="800" height="600" loading="lazy" alt="Киты в натуральную величину в синей подсветке на выставке Whales of Iceland"><div class="t"><h3>Whales of Iceland</h3><p>Двадцать три кита в натуральную величину в тёмном ангаре у воды</p></div></a><a class="tile" href="/ru/chto-posmotret-v-reykjavike/"><img src="/img/tile-thufa.webp" width="800" height="600" loading="lazy" alt="Тюва — спиральный холм, покрытый травой, с рыбной сушильней на вершине"><div class="t"><h3>Тюва</h3><p>Конец маршрута: спиральный холм с рыбной сушильней наверху</p></div></a></div>
   </div>
 </section>
 
@@ -360,7 +363,7 @@ footer li{margin-bottom:8px}
 <section>
   <div class="wrap">
     <h2>Подготовка к поездке</h2>
-    <div class="grid g3" style="margin-top:22px"><div class="card"><div class="pad"><h3>Как добраться</h3><p><a href="/ru/aeroport-keflavik-reykjavik/">Аэропорт Кеблавик</a> · <a href="/ru/transport-v-reykjavike/">Передвижение по городу</a></p></div></div><div class="card"><div class="pad"><h3>Экскурсии</h3><p><a href="/ru/zolotoe-kolco-islandii/">Золотое кольцо</a> · <a href="/ru/yuzhnyy-bereg-islandii/">Южный берег</a> · <a href="/ru/ekskursii-iz-reykjavika/">Все экскурсии</a></p></div></div><div class="card"><div class="pad"><h3>Сроки</h3><p><a href="/ru/kogda-ehat-v-reykjavik/">Когда ехать</a> · <a href="/ru/chto-vzyat-v-islandiyu/">Что взять</a> · <a href="/ru/severnoe-siyanie-reykjavik/">Северное сияние</a></p></div></div><div class="card"><div class="pad"><h3>В городе</h3><p><a href="/ru/hallgrimskirkja/">Хатльгримскиртья</a> · <a href="/ru/perlan/">Перлан</a> · <a href="/ru/strit-art-reykjavika/">Стрит-арт</a></p></div></div><div class="card"><div class="pad"><h3>Вода</h3><p><a href="/ru/blue-lagoon/">Голубая лагуна</a> · <a href="/ru/sky-lagoon/">Sky Lagoon</a> · <a href="/ru/geotermalnye-basseyny-reykjavika/">Городские бассейны</a></p></div></div><div class="card"><div class="pad"><h3>Практика</h3><p><a href="/ru/ceny-v-reykjavike/">Сколько стоит</a> · <a href="/ru/gde-ostanovitsya-v-reykjavike/">Где жить</a> · <a href="/ru/islandskaya-kuhnya/">Что есть</a></p></div></div></div>
+    <div class="grid g3" style="margin-top:22px"><div class="card"><div class="pad"><h3>Как добраться</h3><p><a href="/ru/aeroport-keflavik-reykjavik/">Аэропорт Кеблавик</a> · <a href="/ru/transport-v-reykjavike/">Передвижение по городу</a></p></div></div><div class="card"><div class="pad"><h3>Экскурсии</h3><p><a href="/ru/zolotoe-kolco-islandii/">Золотое кольцо</a> · <a href="/ru/yuzhnyy-bereg-islandii/">Южный берег</a> · <a href="/ru/ekskursii-iz-reykjavika/">Все экскурсии</a></p></div></div><div class="card"><div class="pad"><h3>Сроки</h3><p><a href="/ru/kogda-ehat-v-reykjavik/">Когда ехать</a> · <a href="/ru/chto-vzyat-v-islandiyu/">Что взять</a> · <a href="/ru/severnoe-siyanie-reykjavik/">Северное сияние</a></p></div></div><div class="card"><div class="pad"><h3>В городе</h3><p><a href="/ru/hallgrimskirkja/">Хатльгримскиркья</a> · <a href="/ru/perlan/">Перлан</a> · <a href="/ru/strit-art-reykjavika/">Стрит-арт</a></p></div></div><div class="card"><div class="pad"><h3>Вода</h3><p><a href="/ru/blue-lagoon/">Голубая лагуна</a> · <a href="/ru/sky-lagoon/">Sky Lagoon</a> · <a href="/ru/geotermalnye-basseyny-reykjavika/">Городские бассейны</a></p></div></div><div class="card"><div class="pad"><h3>Практика</h3><p><a href="/ru/ceny-v-reykjavike/">Сколько стоит</a> · <a href="/ru/gde-ostanovitsya-v-reykjavike/">Где жить</a> · <a href="/ru/islandskaya-kuhnya/">Что есть</a></p></div></div></div>
   </div>
 </section>
 
@@ -398,7 +401,7 @@ footer li{margin-bottom:8px}
     <div class="grid g4">
       <div>
         <h2>Смотреть</h2>
-        <ul><li><a href="/ru/zolotoe-kolco-islandii/">Золотое кольцо из Рейкьявика</a></li><li><a href="/ru/blue-lagoon/">Голубая лагуна: билеты и трансфер</a></li><li><a href="/ru/severnoe-siyanie-reykjavik/">Северное сияние в Рейкьявике</a></li><li><a href="/ru/gidy/">Все гиды</a></li></ul>
+        <ul><li><a href="/ru/odin-den-v-reykjavike/">Один день в Рейкьявике</a></li><li><a href="/ru/gidy/">Все гиды</a></li></ul>
       </div>
       <div>
         <h2>Аудиогид</h2>
@@ -436,20 +439,49 @@ footer li{margin-bottom:8px}
 </script>
 <script>(function(){var s=document.getElementById('sticky');if(!s)return;window.addEventListener('scroll',function(){s.classList.toggle('on',window.scrollY>600);},{passive:true});})();</script>
 <script>
+/* Bókun: движок грузится только после первого действия пользователя (Lighthouse его не делает),
+   а клик по кнопке/ссылке всегда открывает модалку — никакой отдельной страницы. */
 (function(){
-  var loaded=0, ready=0;
-  var EV=['mouseover','touchstart','scroll','keydown','pointerdown'];
+  var UUID='5861f2ab-0e3f-4a33-a6ef-0adde2b83f67', PID='1250141';
+  var WIDGET='https://widgets.bokun.io/online-sales/'+UUID+'/experience/'+PID;
+  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"]';
+  var loaded=0;
   function load(){
     if(loaded)return; loaded=1;
-    EV.forEach(function(e){window.removeEventListener(e,onEvt);});
     var s=document.createElement('script'); s.async=true;
-    s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=5861f2ab-0e3f-4a33-a6ef-0adde2b83f67';
+    s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID='+UUID;
     document.body.appendChild(s);
   }
-  function onEvt(){ if(ready) load(); }
-  EV.forEach(function(e){window.addEventListener(e,onEvt,{passive:true});});
-  setTimeout(function(){ready=1;},1200);
-  setTimeout(load,8000);
+  ['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){
+    window.addEventListener(e,load,{once:true,passive:true});
+  });
+  function engineReady(){
+    return typeof window.BokunWidgets==='function' && typeof window.BokunWidgets.openModal==='function';
+  }
+  document.addEventListener('click',function(ev){
+    if(ev.defaultPrevented||ev.button||ev.metaKey||ev.ctrlKey||ev.shiftKey||ev.altKey) return;
+    var el=ev.target&&ev.target.closest?ev.target.closest(SEL):null;
+    if(!el) return;
+    /* движок уже повесил свой обработчик на эту кнопку — не мешаем */
+    if(el.getAttribute('data-bokun-widget-loaded')==='true') return;
+    ev.preventDefault(); ev.stopPropagation();
+    el.classList.add('is-bokun-loading');
+    load();
+    var t0=Date.now();
+    (function poll(){
+      if(engineReady()){
+        el.classList.remove('is-bokun-loading');
+        window.BokunWidgets.openModal({src:WIDGET+'?isModal=true',openFrom:'bookingButton',buttonId:el.id||''});
+        return;
+      }
+      if(Date.now()-t0>8000){  /* движок не поднялся: не бросаем пользователя, уводим в новую вкладку */
+        el.classList.remove('is-bokun-loading');
+        window.open(el.getAttribute('href'),'_blank','noopener');
+        return;
+      }
+      setTimeout(poll,100);
+    })();
+  },true);
 })();
 </script>
 </body>

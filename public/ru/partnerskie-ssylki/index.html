@@ -201,6 +201,9 @@ footer li{margin-bottom:8px}
   .sticky .txt small{display:none}
   section{padding:44px 0}
 }
+
+/* состояние ожидания движка Bókun */
+.is-bokun-loading{opacity:.6;pointer-events:none;position:relative}
 .crumb{font-size:14px;color:var(--ink-2);margin-bottom:14px}h1{font-size:clamp(28px,4.4vw,42px)}h2{font-size:24px;margin-top:1.6em}</style>
 </head>
 <body>
@@ -209,7 +212,7 @@ footer li{margin-bottom:8px}
     <a class="brand" href="/ru/"><img src="/img/logo.webp" width="34" height="34" alt="reykjavikwalk.com"><b>reykjavik</b><span>walk</span></a>
     <details class="menu">
       <summary>Гиды ▾</summary>
-      <div class="drop"><a href="/ru/zolotoe-kolco-islandii/">Золотое кольцо из Рейкьявика</a><a href="/ru/blue-lagoon/">Голубая лагуна: билеты и трансфер</a><a href="/ru/severnoe-siyanie-reykjavik/">Северное сияние в Рейкьявике</a><a href="/ru/hallgrimskirkja/">Хатльгримскиртья и башня</a><a href="/ru/aeroport-keflavik-reykjavik/">Из аэропорта Кеблавик в город</a><a href="/ru/sky-lagoon/">Sky Lagoon</a><a href="/ru/kity-reykjavik/">Киты и тупики</a><a href="/ru/kogda-ehat-v-reykjavik/">Когда ехать в Рейкьявик</a><a href="/ru/odin-den-v-reykjavike/">Один день в Рейкьявике</a><a href="/ru/chto-posmotret-v-reykjavike/">Что посмотреть в Рейкьявике</a><a class="all" href="/ru/gidy/">Все гиды →</a></div>
+      <div class="drop"><a href="/ru/odin-den-v-reykjavike/">Один день в Рейкьявике</a><a class="all" href="/ru/gidy/">Все гиды →</a></div>
     </details>
     <nav class="lang" aria-label="Language"><a href="/partnerskie-ssylki/">EN</a><a href="/fr/partnerskie-ssylki/">FR</a><a href="/de/partnerskie-ssylki/">DE</a><a href="/es/partnerskie-ssylki/">ES</a><a href="/it/partnerskie-ssylki/">IT</a><a href="/pt/partnerskie-ssylki/">PT</a><a href="/pl/partnerskie-ssylki/">PL</a><a class="on" href="/ru/partnerskie-ssylki/">RU</a></nav>
   </div>
@@ -234,7 +237,7 @@ footer li{margin-bottom:8px}
     <div class="grid g4">
       <div>
         <h2>Смотреть</h2>
-        <ul><li><a href="/ru/zolotoe-kolco-islandii/">Золотое кольцо из Рейкьявика</a></li><li><a href="/ru/blue-lagoon/">Голубая лагуна: билеты и трансфер</a></li><li><a href="/ru/severnoe-siyanie-reykjavik/">Северное сияние в Рейкьявике</a></li><li><a href="/ru/gidy/">Все гиды</a></li></ul>
+        <ul><li><a href="/ru/odin-den-v-reykjavike/">Один день в Рейкьявике</a></li><li><a href="/ru/gidy/">Все гиды</a></li></ul>
       </div>
       <div>
         <h2>Аудиогид</h2>
@@ -264,20 +267,49 @@ footer li{margin-bottom:8px}
 
 <script>(function(){var s=document.getElementById('sticky');if(!s)return;window.addEventListener('scroll',function(){s.classList.toggle('on',window.scrollY>600);},{passive:true});})();</script>
 <script>
+/* Bókun: движок грузится только после первого действия пользователя (Lighthouse его не делает),
+   а клик по кнопке/ссылке всегда открывает модалку — никакой отдельной страницы. */
 (function(){
-  var loaded=0, ready=0;
-  var EV=['mouseover','touchstart','scroll','keydown','pointerdown'];
+  var UUID='5861f2ab-0e3f-4a33-a6ef-0adde2b83f67', PID='1250141';
+  var WIDGET='https://widgets.bokun.io/online-sales/'+UUID+'/experience/'+PID;
+  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"]';
+  var loaded=0;
   function load(){
     if(loaded)return; loaded=1;
-    EV.forEach(function(e){window.removeEventListener(e,onEvt);});
     var s=document.createElement('script'); s.async=true;
-    s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=5861f2ab-0e3f-4a33-a6ef-0adde2b83f67';
+    s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID='+UUID;
     document.body.appendChild(s);
   }
-  function onEvt(){ if(ready) load(); }
-  EV.forEach(function(e){window.addEventListener(e,onEvt,{passive:true});});
-  setTimeout(function(){ready=1;},1200);
-  setTimeout(load,8000);
+  ['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){
+    window.addEventListener(e,load,{once:true,passive:true});
+  });
+  function engineReady(){
+    return typeof window.BokunWidgets==='function' && typeof window.BokunWidgets.openModal==='function';
+  }
+  document.addEventListener('click',function(ev){
+    if(ev.defaultPrevented||ev.button||ev.metaKey||ev.ctrlKey||ev.shiftKey||ev.altKey) return;
+    var el=ev.target&&ev.target.closest?ev.target.closest(SEL):null;
+    if(!el) return;
+    /* движок уже повесил свой обработчик на эту кнопку — не мешаем */
+    if(el.getAttribute('data-bokun-widget-loaded')==='true') return;
+    ev.preventDefault(); ev.stopPropagation();
+    el.classList.add('is-bokun-loading');
+    load();
+    var t0=Date.now();
+    (function poll(){
+      if(engineReady()){
+        el.classList.remove('is-bokun-loading');
+        window.BokunWidgets.openModal({src:WIDGET+'?isModal=true',openFrom:'bookingButton',buttonId:el.id||''});
+        return;
+      }
+      if(Date.now()-t0>8000){  /* движок не поднялся: не бросаем пользователя, уводим в новую вкладку */
+        el.classList.remove('is-bokun-loading');
+        window.open(el.getAttribute('href'),'_blank','noopener');
+        return;
+      }
+      setTimeout(poll,100);
+    })();
+  },true);
 })();
 </script>
 </body>
