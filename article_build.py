@@ -9,17 +9,27 @@ import importlib, json, pathlib, re, sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import build as B
 
-ARTICLE_IDX = 8
+# ключ статьи → (индекс в плане контента, пакет с текстами)
+ARTICLES = {
+    "one-day": (8, "one_day"),
+    "tower":   (3, "tower"),
+}
 SITE = B.SITE
 OTA = 'target="_blank" rel="noopener sponsored"'
 
 CONTENT = {l: importlib.import_module("content." + l).CONTENT for l in B.LANGS}
-SLUG = {l: CONTENT[l]["guides"][ARTICLE_IDX]["slug"] for l in B.LANGS}
-PATHS = {l: SLUG[l] + "/" for l in B.LANGS}
 
 
-def art_url(lang):
-    return B.url(lang, PATHS[lang])
+def slug(lang, key):
+    return CONTENT[lang]["guides"][ARTICLES[key][0]]["slug"]
+
+
+def paths(key):
+    return {l: slug(l, key) + "/" for l in B.LANGS}
+
+
+def art_url(lang, key):
+    return B.url(lang, slug(lang, key) + "/")
 
 
 def tb(path, slot):
@@ -65,10 +75,13 @@ table.tbl th{background:var(--sand);font-weight:700}
 """
 
 
-def build(lang):
+def build(lang, key):
+    idx, pkg = ARTICLES[key]
     C = CONTENT[lang]
     L = C["ui"]
-    V = importlib.import_module("bodies." + lang)
+    V = importlib.import_module(f"bodies.{pkg}.{lang}")
+    SLUG = {l: slug(l, key) for l in B.LANGS}
+    PATHS = paths(key)
 
     prefix = "../" if lang == "en" else "../../"
     home = "/" if lang == "en" else f"/{lang}/"
@@ -94,10 +107,12 @@ def build(lang):
         STARS=stars, RATELABEL=L["rating_label"], PRICESUB=L["price_sub"],
         CHECKOUTNOTE=L["checkout_note"], OPENSHOP=L["open_shop"],
         TBPRODUCT=tb("product/reykjavik-city-walking-tour", "article_card"),
+        ONEDAY=(("/" if lang == "en" else f"/{lang}/") + slug(lang, "one-day") + "/"),
+        TOWER=(("/" if lang == "en" else f"/{lang}/") + slug(lang, "tower") + "/"),
         FAQHTML=faqhtml)
 
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "Article", "@id": art_url(lang) + "#article",
+        {"@type": "Article", "@id": art_url(lang, key) + "#article",
          "headline": V.HEADLINE, "description": V.DESC,
          "image": f"{SITE}/img/hero-1536.webp",
          "datePublished": "2026-09-23", "dateModified": "2026-09-23",
@@ -105,19 +120,19 @@ def build(lang):
          "author": {"@type": "Person", "name": "Eugene", "description": L["author_bio_plain"]},
          "publisher": {"@type": "Organization", "name": "TouringBee",
                        "logo": {"@type": "ImageObject", "url": f"{SITE}/img/logo.webp"}},
-         "mainEntityOfPage": art_url(lang)},
-        {"@type": "FAQPage", "@id": art_url(lang) + "#faq",
+         "mainEntityOfPage": art_url(lang, key)},
+        {"@type": "FAQPage", "@id": art_url(lang, key) + "#faq",
          "mainEntity": [{"@type": "Question", "name": q,
                          "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in V.FAQ]},
-        {"@type": "BreadcrumbList", "@id": art_url(lang) + "#breadcrumb", "itemListElement": [
+        {"@type": "BreadcrumbList", "@id": art_url(lang, key) + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": C["home"]["h1"] if "h1" in C["home"] else "Reykjavik",
              "item": B.url(lang)},
-            {"@type": "ListItem", "position": 2, "name": V.HEADLINE, "item": art_url(lang)}]},
+            {"@type": "ListItem", "position": 2, "name": V.HEADLINE, "item": art_url(lang, key)}]},
     ]}
 
     hreflang = "\n".join(
-        [f'<link rel="alternate" hreflang="{l}" href="{art_url(l)}">' for l in B.LANGS]
-        + [f'<link rel="alternate" hreflang="x-default" href="{art_url("en")}">'])
+        [f'<link rel="alternate" hreflang="{l}" href="{art_url(l, key)}">' for l in B.LANGS]
+        + [f'<link rel="alternate" hreflang="x-default" href="{art_url("en", key)}">'])
 
     sticky = f'''
 <div class="sticky" id="sticky">
@@ -137,12 +152,12 @@ def build(lang):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{V.TITLE}</title>
 <meta name="description" content="{V.DESC}">
-<link rel="canonical" href="{art_url(lang)}">
+<link rel="canonical" href="{art_url(lang, key)}">
 {hreflang}
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="reykjavikwalk.com">
 <meta property="og:locale" content="{B.OG_LOCALE[lang]}">
-<meta property="og:url" content="{art_url(lang)}">
+<meta property="og:url" content="{art_url(lang, key)}">
 <meta property="og:title" content="{V.TITLE}">
 <meta property="og:description" content="{V.DESC}">
 <meta property="og:image" content="{SITE}/img/hero-1536.webp">
@@ -176,10 +191,13 @@ def build(lang):
 
 
 if __name__ == "__main__":
-    todo = sys.argv[1:] or B.LANGS
-    for l in todo:
-        try:
-            out, n, w = build(l)
-            print(f"{l}: {out}  ({n:,} символов, ~{w} слов)")
-        except ModuleNotFoundError as e:
-            print(f"{l}: нет bodies/{l}.py — пропущен")
+    args = sys.argv[1:]
+    key = args[0] if args and args[0] in ARTICLES else None
+    langs = [a for a in args if a in B.LANGS] or B.LANGS
+    for k in ([key] if key else list(ARTICLES)):
+        for l in langs:
+            try:
+                out, n, w = build(l, k)
+                print(f"{k} · {l}: {out}  ({n:,} символов, ~{w} слов)")
+            except ModuleNotFoundError:
+                print(f"{k} · {l}: нет текста — пропущен")

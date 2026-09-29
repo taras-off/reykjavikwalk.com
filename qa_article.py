@@ -4,7 +4,9 @@
 import json, pathlib, re, sys
 sys.path.insert(0, ".")
 import build as B
-from article_build import SLUG, CONTENT, art_url
+from article_build import ARTICLES, CONTENT, art_url, slug as art_slug
+KEY = sys.argv[1] if len(sys.argv) > 1 else "one-day"
+SLUG = {l: art_slug(l, KEY) for l in B.LANGS}
 
 FAIL = []
 def bad(lang, msg): FAIL.append(f"{lang}: {msg}")
@@ -53,6 +55,7 @@ def strip_tags(h):
     h = re.sub(r"</(p|li|td|th|h[1-6]|dd|dt|figcaption|summary|div|section)>", ". ", h)
     return re.sub(r"<[^>]+>", " ", h)
 
+print(f"статья: {KEY}")
 print(f"{'язык':5} {'слов':>5} {'title':>6} {'desc':>5} {'CTA':>4} {'FAQ':>4} {'макс.предл.':>12}  вердикт")
 print("─" * 78)
 
@@ -93,7 +96,7 @@ for lang in B.LANGS:
         if b_ - a > 1: bad(lang, f"разрыв в иерархии заголовков h{a}→h{b_}")
     if h.count('rel="alternate"') != 9: bad(lang, "hreflang не 8+x-default")
     for l2 in B.LANGS:
-        if f'href="{art_url(l2)}"' not in h: bad(lang, f"нет hreflang на {l2}")
+        if f'href="{art_url(l2, KEY)}"' not in h: bad(lang, f"нет hreflang на {l2}")
     sw = re.search(r'<nav class="lang".*?</nav>', h, re.S).group(0)
     for l2 in B.LANGS:
         want = B.url(l2, SLUG[l2] + "/").replace(B.SITE, "")
