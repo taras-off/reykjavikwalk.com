@@ -33,6 +33,14 @@ REGISTER = {
 }
 
 # ── кальки и военная метафорика на месте нейтрального глагола ────────────────
+# Абсолюты про режим работы транспорта: расписание почти всегда конечно.
+SERVICE_ABSOLUTES = (
+    r"(bus|buses|coach|Flybus|autocar|Autobus|autob[uú]s|autobus|авто́?бус\w*)"
+    r"[^.!?]{0,80}"
+    r"(around the clock|24 hours a day|24/7|day or night|rund um die Uhr|jour et nuit|"
+    r"24 horas|tutto il giorno|całą dobę|кругл(ые сутки|осуточно))"
+)
+
 CALQUE = [
  r"\bвзять башню\b", r"\bprendre la tour\b", r"\bden Turm nehmen\b", r"\btomar la torre\b",
  r"\bprendere la torre\b", r"\btomar a torre\b", r"\bwzi[ąa]ć wie[żz]ę\b", r"\btake the tower\b",
@@ -42,11 +50,12 @@ CALQUE = [
  r"в одном автобусе от",
 ]
 
+# цена продукта в местном формате + разделитель тысяч в суммах ISK
 NUM = {
- "en": (r"€9\.99", r"1,500 ISK"), "fr": (r"9,99 €", r"1 500 ISK"),
- "de": (r"9,99 €", r"1\.500 ISK"), "es": (r"9,99 €", r"1\.500 ISK"),
- "it": (r"9,99 €", r"1\.500 ISK"), "pt": (r"9,99 €", r"1\.500 ISK"),
- "pl": (r"9,99 €", r"1500 ISK"),  "ru": (r"9,99 €", r"1500 ISK"),
+ "en": (r"€9\.99", ","), "fr": (r"9,99 €", "\u00a0 "),
+ "de": (r"9,99 €", "."),  "es": (r"9,99 €", "."),
+ "it": (r"9,99 €", "."),  "pt": (r"9,99 €", "."),
+ "pl": (r"9,99 €", ""),   "ru": (r"9,99 €", ""),
 }
 
 def strip_tags(h):
@@ -75,15 +84,34 @@ for lang in B.LANGS:
         m = re.search(pat, text, re.I if lang != "it" else 0)
         if m: bad(lang, f"регистр: «{m.group(0)}» — {why}")
 
+    # 2b. посторонние системы письма (CJK, иврит, арабица) — следы опечаток
+    stray = re.findall(r"[\u3040-\u30ff\u4e00-\u9fff\u0590-\u05ff\u0600-\u06ff]", text)
+    if stray: bad(lang, f"посторонние символы в тексте: {sorted(set(stray))}")
+    # кириллица в латинских языках и наоборот
+    if lang != "ru" and re.search(r"[А-Яа-яЁё]", text): bad(lang, "кириллица в нелатинском тексте")
+    if lang == "ru":
+        for w in re.findall(r"\b[A-Za-z]{2,}\b", text):
+            pass  # латиница в русском законна: Flybus, Strætó, BSÍ, TouringBee
+
+    # 3a. абсолюты про режим работы транспорта
+    m = re.search(SERVICE_ABSOLUTES, text, re.I)
+    if m: bad(lang, f"абсолют про режим работы: «{' '.join(m.group(0).split())[:70]}…» — у расписания есть конец")
+
     # 3. кальки
     for pat in CALQUE:
         m = re.search(pat, text, re.I)
         if m: bad(lang, f"калька/метафора захвата: «{m.group(0)}»")
 
     # 4. формат чисел
-    eur, isk = NUM[lang]
+    eur, sep = NUM[lang]
     if not re.search(eur, body): bad(lang, f"нет цены в местном формате ({eur})")
-    if not re.search(isk, body): bad(lang, f"нет 1500 ISK в местном формате ({isk})")
+    for amount in set(re.findall(r"\b(\d{1,3}(?:[.,\u00a0 ]\d{3})+|\d{4,})\s?ISK", text)):
+        digits = re.sub(r"[^\d]", "", amount)
+        if len(digits) < 4: continue
+        want = digits if not sep else digits[:-3] + sep[0] + digits[-3:]
+        ok = any(amount.strip() == (digits if not s else digits[:-3] + s + digits[-3:])
+                 for s in (sep or [""]))
+        if not ok: bad(lang, f"разделитель тысяч: «{amount.strip()} ISK», ожидается «{want} ISK»")
 
     # 5. структура
     title = re.search(r"<title>(.*?)</title>", h).group(1)

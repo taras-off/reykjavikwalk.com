@@ -233,6 +233,7 @@ BODY_TMPL = """
 
 <h2>Continue exploring</h2>
 <ul>
+  <li><a href="{KEF}">Keflavík airport to the city</a> — bus, taxi or car, and the gap before check-in</li>
   <li><a href="{TOWER}">Hallgrímskirkja and the tower</a> — tickets, hours and the 16:45 deadline</li>
   <li><a href="{HOME}">The complete Reykjavik guide</a> — the walk, the day trips and the seasons</li>
   <li><a href="{GUIDES}">All Reykjavik guides</a> — what is published and what is in the works</li>

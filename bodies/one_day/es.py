@@ -220,6 +220,7 @@ BODY_TMPL = """
 
 <h2>Seguir leyendo</h2>
 <ul>
+  <li><a href="{KEF}">Del aeropuerto de Keflavík al centro</a> — autobús, taxi o coche, y el hueco antes de entrar</li>
   <li><a href="{TOWER}">Hallgrímskirkja y su torre</a> — entradas, horarios y el límite de las 16:45</li>
   <li><a href="{HOME}">La guía completa de Reikiavik</a> — la ruta, las excursiones y las estaciones</li>
   <li><a href="{GUIDES}">Todas las guías de Reikiavik</a> — lo publicado y lo que viene</li>

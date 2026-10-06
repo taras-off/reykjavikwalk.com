@@ -69,8 +69,14 @@ def hreflang_links(path=""):
 
 # Индексы статей из c["guides"], которые реально опубликованы.
 # Списки guides во всех языках выровнены по индексу, поэтому индекс = статья.
-PUBLISHED_IDX = [3, 8]    # 3 = Хатльгримскиркья, 8 = один день в Рейкьявике
-ARTICLE_LASTMOD = "2026-09-23"
+# Опубликованные статьи: индекс в c["guides"] → дата последнего изменения.
+# Дата у каждой своя: один общий ARTICLE_LASTMOD врал в sitemap.
+PUBLISHED = {
+    8: "2026-09-23",   # один день в Рейкьявике
+    3: "2026-09-29",   # Хатльгримскиркья и башня
+    4: "2026-10-05",   # из Кеблавика в город
+}
+PUBLISHED_IDX = sorted(PUBLISHED)
 
 
 def lang_switcher(lang, path="", paths=None):
@@ -592,9 +598,9 @@ def sitemap(contents):
 
     entry({l: url(l) for l in LANGS}, "1.0", "weekly")
     entry({l: url(l, contents[l]["slugs"]["guides"] + "/") for l in LANGS}, "0.6")
-    for i in PUBLISHED_IDX:
+    for i, lastmod in sorted(PUBLISHED.items()):
         entry({l: url(l, contents[l]["guides"][i]["slug"] + "/") for l in LANGS},
-              "0.8", "monthly", ARTICLE_LASTMOD)
+              "0.8", "monthly", lastmod)
     entry({l: url(l, contents[l]["slugs"]["privacy"] + "/") for l in LANGS}, "0.2")
     entry({l: url(l, contents[l]["slugs"]["affiliate"] + "/") for l in LANGS}, "0.2")
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'

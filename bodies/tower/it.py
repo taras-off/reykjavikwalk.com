@@ -221,6 +221,7 @@ BODY_TMPL = """
 <h2>Continua a leggere</h2>
 <ul>
   <li><a href="{ONEDAY}">Reykjavik in un giorno</a> — l'itinerario di cui questa torre è il perno</li>
+  <li><a href="{KEF}">Dall'aeroporto di Keflavík al centro</a> — come arrivarci prima di tutto il resto</li>
   <li><a href="{HOME}">La guida completa di Reykjavik</a> — la passeggiata, le escursioni e le stagioni</li>
   <li><a href="{GUIDES}">Tutte le guide di Reykjavik</a> — cosa è pubblicato e cosa sta arrivando</li>
 </ul>

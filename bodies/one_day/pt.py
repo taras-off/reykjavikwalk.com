@@ -225,6 +225,7 @@ BODY_TMPL = """
 
 <h2>Continuar a ler</h2>
 <ul>
+  <li><a href="{KEF}">Do aeroporto de Keflavík ao centro</a> — autocarro, táxi ou carro, e o intervalo antes do check-in</li>
   <li><a href="{TOWER}">Hallgrímskirkja e a torre</a> — bilhetes, horários e o limite das 16:45</li>
   <li><a href="{HOME}">O guia completo de Reykjavik</a> — o percurso, as excursões e as estações</li>
   <li><a href="{GUIDES}">Todos os guias de Reykjavik</a> — o que está publicado e o que vem a caminho</li>

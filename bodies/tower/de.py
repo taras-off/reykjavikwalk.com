@@ -223,6 +223,7 @@ BODY_TMPL = """
 <h2>Weiterlesen</h2>
 <ul>
   <li><a href="{ONEDAY}">Reykjavík an einem Tag</a> — der Plan, in dessen Mitte dieser Turm steht</li>
+  <li><a href="{KEF}">Vom Flughafen Keflavík in die Stadt</a> — wie Sie überhaupt erst ankommen</li>
   <li><a href="{HOME}">Der komplette Reykjavík-Guide</a> — der Rundgang, die Ausflüge und die Jahreszeiten</li>
   <li><a href="{GUIDES}">Alle Reykjavík-Guides</a> — was veröffentlicht ist und was noch kommt</li>
 </ul>

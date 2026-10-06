@@ -13,6 +13,7 @@ import build as B
 ARTICLES = {
     "one-day": (8, "one_day"),
     "tower":   (3, "tower"),
+    "keflavik": (4, "keflavik"),
 }
 SITE = B.SITE
 OTA = 'target="_blank" rel="noopener sponsored"'
@@ -109,6 +110,7 @@ def build(lang, key):
         TBPRODUCT=tb("product/reykjavik-city-walking-tour", "article_card"),
         ONEDAY=(("/" if lang == "en" else f"/{lang}/") + slug(lang, "one-day") + "/"),
         TOWER=(("/" if lang == "en" else f"/{lang}/") + slug(lang, "tower") + "/"),
+        KEF=(("/" if lang == "en" else f"/{lang}/") + slug(lang, "keflavik") + "/"),
         FAQHTML=faqhtml)
 
     ld = {"@context": "https://schema.org", "@graph": [

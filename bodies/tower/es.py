@@ -222,6 +222,7 @@ BODY_TMPL = """
 <h2>Seguir leyendo</h2>
 <ul>
   <li><a href="{ONEDAY}">Reikiavik en un día</a> — el itinerario del que esta torre es el eje</li>
+  <li><a href="{KEF}">Del aeropuerto de Keflavík al centro</a> — cómo llegar antes de todo lo demás</li>
   <li><a href="{HOME}">La guía completa de Reikiavik</a> — la ruta, las excursiones y las estaciones</li>
   <li><a href="{GUIDES}">Todas las guías de Reikiavik</a> — lo publicado y lo que viene</li>
 </ul>

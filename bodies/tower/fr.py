@@ -221,6 +221,7 @@ BODY_TMPL = """
 <h2>Pour aller plus loin</h2>
 <ul>
   <li><a href="{ONEDAY}">Reykjavik en un jour</a> — l'itinéraire dont cette tour est le pivot</li>
+  <li><a href="{KEF}">De l'aéroport de Keflavík au centre</a> — comment arriver avant tout le reste</li>
   <li><a href="{HOME}">Le guide complet de Reykjavik</a> — le parcours, les excursions et les saisons</li>
   <li><a href="{GUIDES}">Tous les guides de Reykjavik</a> — ce qui est publié et ce qui arrive</li>
 </ul>

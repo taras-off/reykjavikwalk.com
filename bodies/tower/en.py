@@ -226,6 +226,7 @@ BODY_TMPL = """
 <h2>Continue exploring</h2>
 <ul>
   <li><a href="{ONEDAY}">Reykjavik in one day</a> — the itinerary this tower sits in the middle of</li>
+  <li><a href="{KEF}">Keflavík airport to the city</a> — how to get in before any of this starts</li>
   <li><a href="{HOME}">The complete Reykjavik guide</a> — the walk, the day trips and the seasons</li>
   <li><a href="{GUIDES}">All Reykjavik guides</a> — what is published and what is in the works</li>
 </ul>

@@ -223,6 +223,7 @@ BODY_TMPL = """
 
 <h2>Weiterlesen</h2>
 <ul>
+  <li><a href="{KEF}">Vom Flughafen Keflavík in die Stadt</a> — Bus, Taxi oder Mietwagen, und die Lücke vor dem Check-in</li>
   <li><a href="{TOWER}">Hallgrímskirkja und der Turm</a> — Tickets, Öffnungszeiten und die Grenze 16:45 Uhr</li>
   <li><a href="{HOME}">Der komplette Reykjavík-Guide</a> — der Rundgang, die Ausflüge und die Jahreszeiten</li>
   <li><a href="{GUIDES}">Alle Reykjavík-Guides</a> — was veröffentlicht ist und was noch kommt</li>
