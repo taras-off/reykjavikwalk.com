@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blue Lagoon: realne ceny, transfer i który dzień wybrać</title>
+<meta name="description" content="Ile Blue Lagoon kosztuje naprawdę razem z autobusem, trzy powroty na lotnisko i który dzień wyjazdu jej poświęcić.">
+<link rel="canonical" href="https://reykjavikwalk.com/pl/blue-lagoon/">
+<link rel="alternate" hreflang="en" href="https://reykjavikwalk.com/blue-lagoon/">
+<link rel="alternate" hreflang="fr" href="https://reykjavikwalk.com/fr/blue-lagoon/">
+<link rel="alternate" hreflang="de" href="https://reykjavikwalk.com/de/blue-lagoon/">
+<link rel="alternate" hreflang="es" href="https://reykjavikwalk.com/es/blue-lagoon/">
+<link rel="alternate" hreflang="it" href="https://reykjavikwalk.com/it/blue-lagoon/">
+<link rel="alternate" hreflang="pt" href="https://reykjavikwalk.com/pt/blue-lagoon/">
+<link rel="alternate" hreflang="pl" href="https://reykjavikwalk.com/pl/blue-lagoon/">
+<link rel="alternate" hreflang="ru" href="https://reykjavikwalk.com/ru/blue-lagoon/">
+<link rel="alternate" hreflang="x-default" href="https://reykjavikwalk.com/blue-lagoon/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="reykjavikwalk.com">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:url" content="https://reykjavikwalk.com/pl/blue-lagoon/">
+<meta property="og:title" content="Blue Lagoon: realne ceny, transfer i który dzień wybrać">
+<meta property="og:description" content="Ile Blue Lagoon kosztuje naprawdę razem z autobusem, trzy powroty na lotnisko i który dzień wyjazdu jej poświęcić.">
+<meta property="og:image" content="https://reykjavikwalk.com/img/hero-1536.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="preconnect" href="https://widgets.bokun.io">
+<style>
+:root{
+  --ink:#0f1a2b;--ink-2:#41506a;--line:#e2e7ef;
+  --navy:#0b2545;--blue:#0a5cb8;--blue-d:#084a94;--teal:#12a5a0;--teal-txt:#0b756f;
+  --sand:#f6f4f0;--white:#fff;--radius:14px;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(30px,5.2vw,50px);font-weight:800}
+h2{font-size:clamp(24px,3.4vw,34px);font-weight:800}
+h3{font-size:20px;font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.lead{font-size:19px;color:var(--ink-2)}
+
+/* ---------- Bókun CLS fix (§4B) ---------- */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:saturate(1.6) blur(8px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:800;font-size:18px;letter-spacing:-.02em}
+.brand:hover{text-decoration:none}
+.brand img{width:34px;height:34px;border-radius:50%}
+.brand b{font-weight:800}.brand span{font-weight:500;color:var(--teal-txt)}
+.menu{position:relative;margin-left:auto}
+.menu summary{list-style:none;cursor:pointer;font-weight:600;color:var(--ink);padding:8px 10px;border-radius:8px}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary:hover{background:var(--sand)}
+.menu .drop{position:absolute;right:0;top:44px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px rgba(15,26,43,.14);min-width:280px;padding:8px;max-height:70vh;overflow:auto}
+.menu .drop a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);font-size:15px}
+.menu .drop a:hover{background:var(--sand);text-decoration:none}
+.menu .drop .all{font-weight:700;color:var(--blue);border-top:1px solid var(--line);margin-top:6px;padding-top:12px}
+.lang{display:flex;gap:2px;flex-wrap:wrap}
+.lang a{font-size:12px;font-weight:700;color:var(--ink-2);padding:5px 6px;border-radius:6px}
+.lang a:hover{background:var(--sand);text-decoration:none}
+.lang a.on{background:var(--navy);color:#fff}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:11px;font-weight:700;font-size:16px;background:var(--blue);color:#fff;border:2px solid var(--blue);transition:.15s;text-align:center}
+.btn:hover{background:var(--blue-d);border-color:var(--blue-d);text-decoration:none;color:#fff}
+.btn.dark{background:#fff;color:var(--navy);border-color:#fff}
+.btn.dark:hover{background:#eef2f7;color:var(--navy);border-color:#eef2f7}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.btn.ghost:hover{background:rgba(255,255,255,.14);color:#fff;border-color:#fff}
+.btn.outline{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn.outline:hover{background:var(--blue);color:#fff}
+.btn.block{width:100%}
+.btn.sm{padding:9px 15px;font-size:14px;border-radius:9px}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;background:var(--navy)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(6,20,38,.86) 0%,rgba(6,20,38,.66) 46%,rgba(6,20,38,.28) 100%)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .wrap{position:relative;z-index:1;padding-top:76px;padding-bottom:76px;max-width:880px}
+.chip{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:18px}
+.hero p.sub{font-size:19px;color:#dbe4f0;max-width:660px}
+
+/* ---------- generic blocks ---------- */
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.soft{background:var(--sand)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.card .pad{padding:20px}
+.card h3{margin-bottom:.35em}
+.card p{color:var(--ink-2);font-size:15.5px;margin-bottom:.8em}
+
+/* audio preview */
+.player{background:var(--navy);color:#fff;border-radius:var(--radius);padding:22px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.player audio{flex:1 1 320px;min-width:260px;height:42px}
+.player .lbl{font-weight:700}
+.player .mut{color:#c3d0e2;font-size:14.5px;margin:0}
+
+/* highlights */
+.hl{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:26px}
+.hl div{background:var(--sand);border-radius:12px;padding:16px 18px;font-size:15.5px;font-weight:600}
+.hl span{display:block;color:var(--teal-txt);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+
+/* rating */
+.stars{display:inline-flex;gap:2px;vertical-align:-2px}
+.stars .st{fill:#f5b700}
+.rate{display:flex;align-items:center;gap:9px;font-size:15px;color:var(--ink-2);margin-bottom:12px}
+.rate b{color:var(--ink);font-size:17px}
+
+/* product card */
+.product{border:2px solid var(--navy);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.product .ph{background:var(--navy)}
+.product .ph img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.product .bd{padding:28px}
+.price{font-size:34px;font-weight:800;color:var(--navy);line-height:1}
+.price small{font-size:15px;font-weight:600;color:var(--ink-2);display:block;margin-top:6px}
+.ticks{list-style:none;padding:0;margin:18px 0}
+.ticks li{padding-left:28px;position:relative;margin-bottom:9px;font-size:15.5px}
+.ticks li:before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--teal)}
+.ticks li:after{content:"";position:absolute;left:4.5px;top:10px;width:4px;height:7px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(42deg)}
+
+/* tiles */
+.tile{position:relative;border-radius:var(--radius);overflow:hidden;min-height:230px;display:flex;align-items:flex-end;color:#fff}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .t{position:relative;padding:26px 18px 18px;background:linear-gradient(rgba(8,18,34,0),rgba(8,18,34,.55) 42%,rgba(8,18,34,.92));width:100%}
+.tile h3{margin:0 0 3px;font-size:18px}
+.tile p{margin:0;font-size:14px;color:#dbe4f0}
+
+/* steps */
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.step b{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-size:16px;margin-bottom:12px}
+.step p{font-size:15.5px;color:var(--ink-2);margin:0}
+
+/* facts */
+.facts{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.facts{grid-template-columns:repeat(2,1fr)}}
+.facts div{background:#fff;padding:18px 20px}
+.facts .k{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-txt);font-weight:700;margin-bottom:5px}
+.facts .v{font-weight:600;font-size:15.5px}
+
+/* ticket box / callout */
+.ticketbox{border:1px solid var(--line);border-left:5px solid var(--teal);background:var(--sand);border-radius:12px;padding:22px 24px;margin:26px 0}
+.ticketbox h3{margin-bottom:.4em}
+.ticketbox p{color:var(--ink-2);font-size:15.5px}
+
+/* partners */
+.noimg{height:180px;display:flex;align-items:flex-end;padding:16px 18px;color:#fff;font-weight:700;font-size:15px;background:linear-gradient(135deg,var(--navy),#14507f 55%,var(--teal))}
+.plabel{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-txt);font-weight:800;margin-bottom:6px}
+.meta{font-size:14px;color:var(--ink-2)}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;gap:12px;align-items:flex-start}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:before{content:"+";color:var(--teal-txt);font-weight:800;font-size:21px;line-height:1.1}
+.faq details[open] summary:before{content:"–"}
+.faq p{margin:12px 0 0 24px;color:var(--ink-2);font-size:16px}
+
+/* author */
+.author{display:flex;gap:22px;align-items:flex-start;background:var(--sand);border-radius:var(--radius);padding:26px}
+.author .av{width:96px;height:96px;border-radius:50%;flex:0 0 96px;object-fit:cover;background:var(--navy)}
+.author p{font-size:15.5px;color:var(--ink-2)}
+
+/* final cta */
+.final{background:var(--navy);color:#fff;border-radius:18px;padding:38px 32px;text-align:center}
+.final p{color:#dbe4f0;max-width:640px;margin:0 auto 4px}
+
+/* footer */
+footer{background:#08182a;color:#b9c7da;padding:48px 0 110px;font-size:15px;margin-top:20px}
+footer h2{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.09em;margin:0 0 12px;font-weight:700}
+footer a{color:#b9c7da}
+footer a:hover{color:#fff}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:8px}
+.disc{border-top:1px solid #16304a;margin-top:32px;padding-top:20px;font-size:13.5px;color:#8296ad}
+
+/* sticky buy bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(11,37,69,.97);backdrop-filter:blur(8px);color:#fff;padding:11px 0;transform:translateY(110%);transition:transform .25s}
+.sticky.on{transform:none}
+.sticky .wrap{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.sticky .txt{font-size:15px;font-weight:600}
+.sticky .txt small{display:block;font-weight:500;color:#bdcbde;font-size:13px}
+@media(max-width:720px){
+  .product{grid-template-columns:1fr}
+  .product .ph img{min-height:220px}
+  .sticky .txt small{display:none}
+  section{padding:44px 0}
+}
+
+/* состояние ожидания движка Bókun */
+.is-bokun-loading{opacity:.6;pointer-events:none;position:relative}
+
+/* план: тема ещё не написана — не ссылка */
+.soon-i{color:var(--ink-2);opacity:.65}
+.tile.is-soon{cursor:default;opacity:.72}
+
+/* ── статья ── */
+.crumb{font-size:14px;color:var(--ink-2);margin-bottom:12px}
+.arthero{position:relative;color:#fff;background:var(--navy)}
+.arthero:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(6,20,38,.88) 0%,rgba(6,20,38,.7) 46%,rgba(6,20,38,.35) 100%)}
+.arthero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.arthero .wrap{position:relative;z-index:1;padding:58px 20px;max-width:840px}
+.arthero .crumb{color:#c3d0e2}.arthero .crumb a{color:#fff}
+.arthero h1{font-size:clamp(28px,4.6vw,44px)}
+.arthero p.sub{font-size:19px;color:#dbe4f0;max-width:660px}
+.byline{display:flex;align-items:center;gap:10px;margin:18px 0 4px;font-size:14.5px;color:#c3d0e2}
+.byline img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.wrap.prose{max-width:840px}
+.prose{margin:0 auto}
+.prose h2{margin-top:1.7em}
+.prose h3{margin-top:1.4em;font-size:18px}
+.prose ul,.prose ol{padding-left:22px;color:var(--ink-2)}
+.prose li{margin-bottom:7px}
+.prose figure{margin:26px 0}
+.prose figure img{border-radius:14px;width:100%}
+.prose figcaption{font-size:14px;color:var(--ink-2);margin-top:8px}
+table.tbl{width:100%;border-collapse:collapse;margin:22px 0;font-size:15.5px}
+table.tbl th,table.tbl td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+table.tbl th{background:var(--sand);font-weight:700}
+.glance{border:1px solid var(--line);border-left:5px solid var(--teal);background:var(--sand);border-radius:12px;padding:20px 22px;margin:26px 0}
+.glance h2{margin-top:0;font-size:21px}
+.glance dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0;font-size:15.5px}
+.glance dt{font-weight:700}
+.glance dd{margin:0;color:var(--ink-2)}
+.minicta{border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,var(--sand) 100%);border-radius:14px;padding:22px 24px;margin:30px 0}
+.minicta h2{margin:0 0 8px;font-size:21px}
+.minicta p{margin:0 0 16px;color:var(--ink-2)}
+.minicta .btn{margin:0}
+.disc{font-size:13.5px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:16px;margin-top:34px}
+@media(max-width:600px){.glance dl{grid-template-columns:1fr;gap:2px 0}.glance dd{margin-bottom:8px}}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="/pl/"><img src="../../img/logo.webp" width="34" height="34" alt="reykjavikwalk.com"><b>reykjavik</b><span>walk</span></a>
+    <details class="menu">
+      <summary>Przewodniki ▾</summary>
+      <div class="drop"><a href="/pl/reykjavik-self-guided-walking-tour/">Spacer na własną rękę</a><a href="/pl/blue-lagoon/">Blue Lagoon: bilety i dojazd</a><a href="/pl/zorza-polarna-reykjavik/">Zorza polarna w Reykjaviku</a><a href="/pl/hallgrimskirkja/">Hallgrímskirkja i wieża</a><a href="/pl/lotnisko-keflavik-reykjavik/">Z lotniska Keflavík do centrum</a><a href="/pl/sky-lagoon/">Sky Lagoon</a><a href="/pl/jeden-dzien-w-reykjaviku/">Jeden dzień w Reykjaviku</a><a href="/pl/darmowy-spacer-reykjavik/">Darmowe spacery z przewodnikiem</a><a class="all" href="/pl/przewodniki/">Wszystkie przewodniki →</a></div>
+    </details>
+    <nav class="lang" aria-label="Language"><a href="/blue-lagoon/">EN</a><a href="/fr/blue-lagoon/">FR</a><a href="/de/blue-lagoon/">DE</a><a href="/es/blue-lagoon/">ES</a><a href="/it/blue-lagoon/">IT</a><a href="/pt/blue-lagoon/">PT</a><a class="on" href="/pl/blue-lagoon/">PL</a><a href="/ru/blue-lagoon/">RU</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="arthero">
+  <img class="bg" src="../../img/card-blue-lagoon.webp" width="600" height="450" alt="Mlecznobłękitna laguna geotermalna, para nad drewnianym pomostem i skały lawowe przy brzegu" fetchpriority="high">
+  <div class="wrap">
+    <p class="crumb"><a href="/pl/">Reykjavik</a> › Blue Lagoon</p>
+    <h1>Blue Lagoon: ile naprawdę kosztuje i który dzień wyjazdu jej poświęcić</h1>
+    <p class="sub">Leży 20 minut od lotniska i 60 minut od Reykjaviku. Z tego jednego faktu wynika prawie cała reszta: ile zapłacisz, który autobus złapiesz i czy wizyta kosztuje cię dzień w mieście, czy nic.</p>
+    <div class="byline"><img src="../../img/author-eugene.webp" width="36" height="36" loading="lazy" alt="Eugene, autor audioprzewodników TouringBee">
+      <span>Eugene · aktualizacja 22 października 2026</span></div>
+    <div class="btnrow">
+      <a class="btn dark" href="#when">Który dzień wybrać</a>
+      <a class="btn ghost" href="https://www.tiqets.com/en/reykjavik-attractions-c22/?partner=touringbee_limited-180893&amp;tq_campaign=reykjavikwalk" target="_blank" rel="noopener sponsored">Porównaj bilety</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap prose">
+
+<p class="lead">Blue Lagoon nie leży w Reykjaviku ani obok Reykjaviku. Leży pod Grindavíkiem, przy drodze między stolicą a lotniskiem w Keflavíku: 20 minut od terminalu, 60 minut od miasta. Obie liczby pochodzą z własnej wyszukiwarki rezerwacji laguny i razem stanowią cały sens tej strony.</p>
+
+<p>Przez to położenie pytanie nie brzmi, czy jechać. Brzmi: <strong>którego dnia</strong>. Podwieszona pod przylot albo odlot laguna nie kosztuje prawie nic czasu. Wyjęta ze środka miejskiego wyjazdu kosztuje pół dnia, dwie godziny autobusu i budzik na 06:30.</p>
+
+<p>Wydajemy <a href="#audio">audiospacer po Reykjaviku</a>, więc nie jest nam obojętne, ile twoich godzin zabiera laguna. Właśnie dlatego ta strona liczy je na głos i kładzie rozkłady na stół, zamiast tłumaczyć, że laguna jest przereklamowana.</p>
+
+<div class="glance">
+  <h2>W skrócie</h2>
+  <dl>
+    <dt>Gdzie</dt><dd>Norðurljósavegur 9, Grindavík — 20 min od lotniska w Keflavíku, 60 min od Reykjaviku</dd>
+    <dt>Wstęp Comfort</dt><dd>Reklamowany od 88 €. W sześciu sprawdzonych terminach: od 92 do 138 €</dd>
+    <dt>Najdroższa godzina</dt><dd>16:00 albo 17:00 — w każdym z terminów</dd>
+    <dt>Oficjalny autobus</dt><dd>W obie strony od 67 € od osoby; dzieci do 11 lat bezpłatnie</dd>
+    <dt>Z autobusem</dt><dd>182 € na osobę w sobotnim koszyku, który złożyliśmy; około 159 € w tani dzień roboczy</dd>
+    <dt>Kursy na lotnisko</dt><dd>Trzy dziennie: 12:00, 14:30, 16:00</dd>
+    <dt>Godziny otwarcia</dt><dd>08:00–22:00 przez większość roku; 08:00–20:00 od 1 stycznia do 31 maja</dd>
+    <dt>Ostatnie okienko</dt><dd>Dwie godziny przed zamknięciem, a z wody wychodzi się pół godziny wcześniej</dd>
+    <dt>Dzieci</dt><dd>Od 2 lat. Od 2 do 11 lat: 15 € (2000 ISK). Do 8 lat w rękawkach</dd>
+    <dt>Co sprawdzić</dt><dd>Godzinę swojego lotu wobec tych trzech kursów na lotnisko</dd>
+  </dl>
+</div>
+
+<h2 id="price">Ile to kosztuje naprawdę</h2>
+
+<p>Strona z cenami mówi: Comfort od 88 €. Otworzyliśmy wyszukiwarkę rezerwacji 21 października 2026 roku i wyceniliśmy ten sam bilet Comfort w sześciu terminach rozrzuconych po roku. Nigdy nie było to 88 €.</p>
+
+<table class="tbl">
+  <tr><th>Termin</th><th>Najtańsze okienko</th><th>Najdroższe</th><th>Najdroższa godzina</th></tr>
+  <tr><td>sob., 24 października 2026</td><td>115 €</td><td>138 €</td><td>12:00 i 17:00</td></tr>
+  <tr><td>sob., 31 października 2026</td><td>115 €</td><td>138 €</td><td>16:00</td></tr>
+  <tr><td>wt., 3 listopada 2026</td><td>92 €</td><td>126 €</td><td>16:00–17:00</td></tr>
+  <tr><td>wt., 24 listopada 2026</td><td>92 €</td><td>126 €</td><td>16:00–17:00</td></tr>
+  <tr><td>wt., 19 stycznia 2027</td><td>100 €</td><td>134 €</td><td>16:00–17:00</td></tr>
+  <tr><td>śr., 14 lipca 2027</td><td>111 €</td><td>134 €</td><td>07:00 i 15:00–17:00</td></tr>
+</table>
+
+<p>Z tej tabeli wynikają dwa wnioski. Trzeci się z niej nie broni.</p>
+
+<p><strong>Co się trzyma.</strong> We wszystkich sześciu terminach najdroższą godziną było 16:00 albo 17:00 — akurat to popołudniowe okienko, które poleca każdy plan zwiedzania. A rozrzut w obrębie jednego dnia sięgał od 23 do 34 €, czyli więcej niż skok z Comfort na Premium: 24 października wyszukiwarka proponowała nam ten upgrade za 23 € od osoby.</p>
+
+<p><strong>Co się nie trzyma.</strong> „Jedź rano, rano taniej" nie działa przez cały rok. Okienko o 08:00 faktycznie leżało na minimum dnia albo tuż obok w pięciu terminach na sześć, ale 14 lipca kosztowało 123 €, podczas gdy te o 20:00 i 21:00 stały na 111 €. W pełni lata tanie godziny przenoszą się na późny wieczór, który w lipcu wciąż jest jasnym dniem.</p>
+
+<p>I to, czego tabela nie pokazuje: zapełnia się. W tę samą październikową sobotę 11:00, 15:00 i 16:00 były już niedostępne, a na 12:00 zostawało sześć miejsc. „Rezerwacja z wyprzedzeniem jest konieczna" nie jest tu formułką reklamową.</p>
+
+<h3>Kategorie biletów i czy warto dopłacać</h3>
+
+<table class="tbl">
+  <tr><th>Bilet</th><th>Cena katalogowa</th><th>Co dokłada</th></tr>
+  <tr><td>Comfort</td><td>od 11990 ISK</td><td>Laguna, sauna, łaźnia parowa, maska krzemionkowa, ręcznik, szafka, jeden napój bezalkoholowy</td></tr>
+  <tr><td>Premium</td><td>od 14990 ISK</td><td>Szlafrok, napój do wyboru w barze w wodzie, dwie dodatkowe maski i jedna na wynos</td></tr>
+  <tr><td>Signature</td><td>od 18490 ISK</td><td>Drugi napój i kosmetyki na wynos o wartości 14000 ISK</td></tr>
+  <tr><td>Retreat Spa</td><td>od 682 € za przebieralnię</td><td>Pięć godzin, prywatna przebieralnia, dostęp do zamkniętej Retreat Lagoon</td></tr>
+</table>
+
+<p>Dopłata do Premium zwraca się wyłącznie przez szlafrok i wyłącznie zimą: droga między wodą a budynkiem jest w lutym warta więcej niż napój. Signature to kosmetyki z rabatem, czyli decyzja zakupowa, a nie kąpielowa.</p>
+
+<div class="ticketbox">
+  <h3>Zanim kupisz w cenie bezpośredniej</h3>
+  <p>Wstęp sprzedaje się też w pakiecie z transferem i innymi przystankami, a czasem pakiet wygrywa z osobnym kupowaniem obu części. Warto raz zerknąć, co jest dostępne na twoje terminy.</p>
+  <a class="btn sm" href="https://www.getyourguide.com/pl-pl/reykjavik-l30/?partner_id=0M4BUCG&amp;utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Bilety i transfer do Blue Lagoon</a>
+  <a class="btn sm outline" href="https://www.tiqets.com/en/reykjavik-attractions-c22/?partner=touringbee_limited-180893&amp;tq_campaign=reykjavikwalk" target="_blank" rel="noopener sponsored">Inne miejsca na Islandii</a>
+</div>
+
+<h2 id="buses">Trzy autobusy, które decydują o twoim dniu</h2>
+
+<p>To fragment, którego prawie żaden przewodnik nie drukuje. Między laguną a Reykjavikiem przewoźnik wystawia sporo autobusów. Między laguną a lotniskiem — bardzo mało.</p>
+
+<table class="tbl">
+  <tr><th>Trasa</th><th>Odjazdy</th><th>Czas</th></tr>
+  <tr><td>Lotnisko Keflavík → laguna</td><td>07:30, 09:30, 12:30, 16:30</td><td>20 min</td></tr>
+  <tr><td><strong>Laguna → lotnisko Keflavík</strong></td><td><strong>12:00, 14:30, 16:00</strong></td><td>20 min</td></tr>
+  <tr><td>Reykjavik → laguna</td><td>Co godzinę 07:00–18:00 od 21 sierpnia do 31 stycznia; co godzinę 07:00–16:00 w lutym i marcu; pięć kursów dziennie w kwietniu i maju</td><td>60 min</td></tr>
+  <tr><td>Laguna → Reykjavik</td><td>Co godzinę 12:15–22:15 od 21 sierpnia do 31 stycznia; co godzinę 12:15–20:15 w lutym i marcu</td><td>60 min</td></tr>
+</table>
+
+<p>Trzy kursy na lotnisko, ostatni o 16:00. Sprawdziliśmy to w samym procesie rezerwacji, a nie na stronie z rozkładem: przy wybranym porannym okienku lista powrotów proponowała 12:00, 14:30 i 16:00, i nic więcej.</p>
+
+<p>Jedno zastrzeżenie do tej tabeli. Opublikowany rozkład przewoźnika wciąż zalicza styczeń do sezonu jesiennego, co dawałoby autobusy do miasta do 22:15. Ale godziny samej laguny zamykają drzwi o 20:00 od 1 stycznia, a nasza wycena na 19 stycznia to potwierdziła. Rezerwuj autobus w kasie laguny: pojawiają się tam tylko kursy, które w twoim terminie istnieją.</p>
+
+<p>Połóż to teraz obok tabeli cen, a wychodzi coś użytecznego. <strong>Tanie okienka wieczorne nie mają żadnego autobusu na lotnisko</strong> — wejście o 18:00, 19:00 czy 20:00 zostawia cię bez wyjazdu, jeśli dalej czeka samolot. Za to okienko poranne, które przez większość roku leży na minimum dnia albo tuż obok, łączy się ze wszystkimi trzema kursami.</p>
+
+<p>Czyli w dniu odlotu wariant tani i wariant możliwy to ten sam wariant. Rzadkie szczęście i warto z niego skorzystać.</p>
+
+<p>W drugą stronę, z miasta, arytmetyka jest mniej przyjazna. Na okienko o 08:00 wyszukiwarka poleca autobus o 07:00 z Reykjaviku i pisze dosłownie: <em>bądź gotowy o 06:30</em> — na wyznaczonym przystanku trzeba stać pół godziny przed odjazdem. Wyznaczonym w pełnym sensie: hoteli w centrum nie obsługuje się pod drzwiami. Dostajesz jeden z pięciu punktów — Lækjargata, Harpa, Safnahúsið, Austurbær albo dworzec BSÍ — i czekasz tam po ciemku.</p>
+
+<h2 id="when">Który dzień wybrać</h2>
+
+<p>Własny proces rezerwacji przewoźnika zakłada, że w lagunie spędzisz trzy godziny. Weźmy to za jednostkę — trzy warianty wyglądają tak.</p>
+
+<table class="tbl">
+  <tr><th></th><th>Dzień przylotu</th><th>Dzień odlotu</th><th>Osobny dzień z Reykjaviku</th></tr>
+  <tr><td>Jak dojechać</td><td>Autobus z lotniska: 07:30, 09:30, 12:30 albo 16:30</td><td>Autobus miejski tam, lotniskowy z powrotem</td><td>Autobus miejski w obie strony</td></tr>
+  <tr><td>Czas w drodze</td><td>20 min, drogą, którą i tak jedziesz</td><td>60 min tam, 20 min do terminalu</td><td>Dwie godziny plus pół godziny czekania</td></tr>
+  <tr><td>Pasujące okienko</td><td>Prawie każde</td><td>Tylko rano: ostatni autobus o 16:00</td><td>Każde</td></tr>
+  <tr><td>Bagaż</td><td>Przechowalnia przy parkingu, 1000 ISK za sztukę</td><td>Tak samo</td><td>Nie jest problemem</td></tr>
+  <tr><td>Ile cię kosztuje</td><td>Nic: tą drogą i tak jedziesz</td><td>Nic, jeśli lot jest po mniej więcej 15:00</td><td>Pół dnia czasu w mieście</td></tr>
+</table>
+
+<p><strong>Dzień odlotu to najlepsza wersja</strong>, o ile lot jest dostatecznie późny. Autobus o 12:00 podrzuca pod terminal około 12:20, a ten o 14:30 około 14:50, więc wszystko, co startuje od środka popołudnia, wchodzi spokojnie. Rezerwuj okienko na 08:00 albo 09:00, oddaj walizki, wyjeżdżaj o 12:00 lub 14:30 — martwe godziny między wymeldowaniem a odprawą zamieniają się w to, po co przyjeżdżasz.</p>
+
+<p><strong>Dzień przylotu jest zaraz za nim</strong> i to łagodniejsza wersja przy zmęczonym lądowaniu. Laguna leży 20 minut od drzwi terminalu, a od 21 sierpnia do 31 stycznia autobus do Reykjaviku odjeżdża co godzinę aż do 22:15. Haczykiem są kursy z lotniska: jest ich tylko cztery, więc lądowanie musi wypaść przed 07:30, 09:30, 12:30 albo 16:30.</p>
+
+<p><strong>Osobny dzień z Reykjaviku</strong> to wersja, którą warto zakwestionować. Dwie godziny autobusu, pół godziny na przystanku, trzy godziny w wodzie: to prawie cały krótki dzień. I to ten dzień, którego nie spędzasz w mieście. Przy czterech noclegach w porządku. Przy dwóch drogo, i to w walucie, która nie jest koroną.</p>
+
+<h2>Co dostajesz za te pieniądze</h2>
+
+<p>Około 10000 metrów kwadratowych mineralnej wody morskiej o 37–40 °C, głębokość nieco ponad metr — plan laguny podaje poniżej 1,3 m, centrum pomocy 1,4 m. Dookoła: sauna z widokiem, łaźnia parowa, parowa grota wykuta w skale i wodospad, pod którym można stanąć. Do tego bar w wodzie, bar z maskami i strefa ciszy, gdzie telefony są zakazane. Dwa razy dziennie opowiadają historię miejsca. Jest większa i dziwniejsza, niż sugerują zdjęcia, a woda naprawdę ma ten kolor.</p>
+
+<p>Czym natomiast nie jest, to tajemnicą. W popołudnie wysokiego sezonu to wielka międzynarodowa atrakcja pracująca na granicy przepustowości i tak się ją czuje. Okienka poranne i późnowieczorne są spokojniejsze, a przy okazji tańsze — ta sama rada przychodzi z dwóch stron.</p>
+
+<p>Co do dodatków, skoro proces rezerwacji mocno je wciska. Grupowe unoszenie na wodzie 45 €, śniadanie w pudełku 23 €, szlafrok albo kapcie od 15 €. Masaż w wodzie od 160 €, terapia unoszeniem od 199 €. Dwudaniowy posiłek w Lavie razem ze wstępem Premium wychodzi 199–222 € w całości. Nic z tego nie jest konieczne i wszystko jest dobre; po prostu zdecyduj przed stroną płatności, a nie na niej.</p>
+
+<figure>
+  <img src="../../img/sec-winter-street.webp" width="1024" height="683" loading="lazy" alt="Spokojna ulica Reykjaviku zimą, śnieg na zaparkowanych samochodach i niskie popołudniowe światło na fasadach">
+  <figcaption>Prawdziwa cena dnia w lagunie w środku wyjazdu wygląda tak: to miasto, po którym nie chodzisz. W dniu przylotu albo odlotu nie płacisz jej wcale.</figcaption>
+</figure>
+
+<h2>Dzieci, bagaż i drobny druk</h2>
+
+<p>Minimalny wiek to dwa lata: centrum pomocy tłumaczy, że organizm młodszych dzieci jest zbyt wrażliwy na zawartość minerałów, a poza tym nie ma ich jak zarezerwować. Od 2 do 11 lat wstęp kosztuje 15 €, w cenniku 2000 ISK. Dzieci do 8 lat włącznie muszą mieć rękawki, wydawane bezpłatnie przy wejściu, a jedna dorosła osoba może pilnować najwyżej dwojga dzieci. W autobusie dzieci do 11 lat jadą za darmo, ale widżet przewoźnika dzieli przedziały wiekowe inaczej niż laguna — przy dwunasto- i trzynastolatku warto przyjrzeć się dokładniej.</p>
+
+<p>Szafka jest w cenie i mieści rzeczy wartościowe plus torbę wielkości plecaka. Wszystko większe idzie do przechowalni przy parkingu, 1000 ISK za sztukę, i właśnie to sprawia, że warianty z dniem przylotu i odlotu w ogóle działają.</p>
+
+<p>Dwie pułapki rozkładowe. Ostatnie okienko do rezerwacji wypada dwie godziny przed zamknięciem, a z wody prosi się wyjść pół godziny przed zamknięciem drzwi. Ostatnie wejście dnia kupuje więc 90 minut, a nie trzy godziny, z których wychodzi proces rezerwacji transferu. Druga pułapka: godziny zimowe zmieniają się 1 stycznia, a nie 1 lutego. Strona laguny stawia 08:00–20:00 od 1 stycznia do 31 maja, podczas gdy strona z rozkładem przewoźnika wciąż zostawia styczeń z późnym zamknięciem.</p>
+
+<h2>Kwestia wulkanu</h2>
+
+<p>Zasługuje na prostą odpowiedź zamiast milczenia albo straszenia. Od grudnia 2023 do sierpnia 2025 rząd kraterów Sundhnúkur, kilka kilometrów od laguny, wybuchał dziewięć razy, a laguna zamykała się w tej serii z krótkim wyprzedzeniem. 21 października 2026 roku islandzki instytut meteorologiczny nie pokazywał żadnych ostrzeżeń i podawał warunki normalne.</p>
+
+<p>Nic z tego nie jest powodem, żeby nie rezerwować. Jest powodem, żeby sprawdzić status rano w dniu wizyty i w miarę możliwości trzymać lagunę poza ścieżką krytyczną ostatniego dnia. I żeby jechać drogą 43 zamiast ufać nawigacji: laguna sama ostrzega na swojej stronie, że część aplikacji wciąż pokazuje nieaktualne trasy.</p>
+
+<h2>Blue Lagoon czy Sky Lagoon</h2>
+
+<p>Obie są geotermalne, obie zbudowane, a dzieli je nie to, co większość zakłada.</p>
+
+<table class="tbl">
+  <tr><th></th><th>Blue Lagoon</th><th>Sky Lagoon</th></tr>
+  <tr><td>Z centrum Reykjaviku</td><td>60 minut w jedną stronę autobusem</td><td>Krótki przejazd; mieści się w wieczorze</td></tr>
+  <tr><td>Z lotniska Keflavík</td><td>20 minut, i to po drodze</td><td>Objazd</td></tr>
+  <tr><td>Wstęp standardowy</td><td>Comfort w cenniku 11990 ISK; nam podawano od 92 do 138 €</td><td>Saman od 14990 ISK, w części terminów 16990 ISK</td></tr>
+  <tr><td>Co rusza cenę</td><td>Data i godzina</td><td>Data. Godzina przy naszym sprawdzeniu nią nie ruszała</td></tr>
+  <tr><td>Ile zabiera z wyjazdu</td><td>Pół dnia, o ile nie podwiesisz jej pod lot</td><td>Jeden wieczór</td></tr>
+  <tr><td>Co daje</td><td>Skalę, parową grotę, kolor, pole lawy</td><td>Rytuał w siedmiu krokach i morze na horyzoncie</td></tr>
+</table>
+
+<p>Zwróć uwagę, czego ta tabela <em>nie</em> mówi. Blue Lagoon nie jest tą droższą z dwóch. Jej tanie poranne okienka schodzą poniżej standardowego biletu Sky Lagoon, a wyraźnie drożej wypadają tylko te popołudniowe. W sprawdzonych terminach przejście od najtańszej do najdroższej godziny w obrębie jednego dnia w Blue Lagoon kosztowało mniej więcej tyle, ile cały cennikowy dystans między obiema lagunami.</p>
+
+<p>Wybór rozgrywa się więc w godzinach, a nie w koronach. Jeśli dni są — a zwłaszcza jeśli lagunę da się podwiesić pod lot — jedź do Blue Lagoon: krajobraz tam na zewnątrz jest tym, który ma się w głowie, mówiąc „Islandia". Jeśli wyjazd jest krótki, a każde popołudnie zajęte, <a href="/pl/sky-lagoon/">Sky Lagoon</a> zaspokaja tę samą ochotę bez wyjeżdżania z miasta.</p>
+
+  </div>
+</section>
+
+<section class="soft" id="audio">
+  <div class="wrap">
+    <h2>Audioprzewodnik</h2>
+    <p class="lead" style="max-width:720px">Podwieszając lagunę pod dzień z lotem, zatrzymujesz wszystkie swoje godziny w mieście. Oto pomysł na jedną z nich.</p>
+    <div class="product" style="margin-top:26px">
+      <div class="ph"><img src="../../img/product-reykjavik.webp" width="1200" height="800" loading="lazy" alt="Aplikacja TouringBee z trasą spaceru po Reykjaviku, trzymana przed Hallgrímskirkją"></div>
+      <div class="bd">
+        <h3 style="margin:0 0 6px">Audioprzewodnik TouringBee po Reykjaviku</h3>
+        <p class="meta" style="margin:0 0 10px">27 przystanków · 2–2,5 godziny · jedna płatność, rok dostępu</p>
+        <div class="price">9,99 €<small>Jedna płatność · bez abonamentu · dostęp na rok</small></div>
+        <ul class="ticks">
+          <li><strong>Startuje, kiedy chcesz.</strong> Przydatne w dniu i tak pociętym rozkładem autobusów</li>
+          <li><strong>Działa w pełni offline</strong> — w trakcie spaceru nie potrzeba transmisji danych</li>
+          <li><strong>Pauza w dowolnym momencie.</strong> Kawa, sklep, wieża, i dalej</li>
+          <li><strong>Jedna płatność, rok.</strong> Przejdź drugi raz, jeśli pogoda zepsuje pierwsze podejście</li>
+        </ul>
+        <a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141" data-src="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141?partialView=1" style="width:100%">Przejdź Reykjavik z audioprzewodnikiem</a>
+        <p class="meta" style="margin:12px 0 0;text-align:center">Bezpieczna płatność na tej stronie. Wolisz sklep? <a href="https://touringbee.com/product/reykjavik-city-walking-tour/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=article&amp;utm_content=article_card" rel="noopener" data-no-widget>Otwórz w TouringBee</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+
+<h2>Sześć błędów</h2>
+<ol>
+  <li><strong>Rezerwacja na 16:00 albo 17:00.</strong> W każdym sprawdzonym terminie najdroższa godzina, a przy tym najbardziej zatłoczona. Przejście na 08:00 oszczędzało od 23 do 34 € od osoby.</li>
+  <li><strong>Planowanie dnia odlotu pod wieczorne okienko.</strong> Ostatni autobus na lotnisko odjeżdża o 16:00. Bierz poranek.</li>
+  <li><strong>Budżet na 88 €.</strong> Najtańsze, co nam zaproponowano, to 92 €, a z oficjalnym autobusem wyjazd z Reykjaviku wypada mniej więcej między 159 a 182 € od osoby.</li>
+  <li><strong>Zostawianie tego na ostatnią chwilę.</strong> Okienka się kończą: w jedną październikową sobotę trzy godziny dnia były już zajęte.</li>
+  <li><strong>Ostatnie okienko na długą kąpiel.</strong> Wejścia zamykają się dwie godziny przed drzwiami, a z wody wychodzi się jeszcze pół godziny wcześniej.</li>
+  <li><strong>Zaufanie nawigacji.</strong> Jedź Grindavíkurvegur, drogą 43, i trzymaj się znaków: laguna pisze, że część aplikacji wciąż prowadzi po staremu.</li>
+</ol>
+
+<h2>Częste pytania</h2>
+<div class="faq"><details open><summary>Ile naprawdę kosztuje Blue Lagoon?</summary><p>Strona reklamuje wstęp Comfort od 88 €. W sześciu terminach sprawdzonych w ich własnej wyszukiwarce rezerwacji najtańsze okienko kosztowało 92 €, a najdroższe 138 € — przy dokładnie tym samym bilecie. Do tego oficjalny autobus w obie strony od 67 € od osoby: nasz koszyk dla dwojga dorosłych w sobotę pokazywał 364,56 €, czyli po 182 € na głowę. W tani dzień roboczy wychodzi bliżej 159 €.</p></details><details><summary>O której godzinie Blue Lagoon jest najtańsza?</summary><p>We wszystkich sześciu sprawdzonych terminach najdroższą godziną dnia było 16:00 albo 17:00. Okienko o 08:00 leżało na minimum dnia albo tuż obok w pięciu terminach na sześć; wyjątkiem jest połowa lipca, gdzie minimum przenosi się na 20:00 i 21:00. Rozrzut w obrębie jednego dnia sięgał od 23 do 34 € — więcej niż skok do kolejnej kategorii biletu.</p></details><details><summary>Jak dojechać do Blue Lagoon z lotniska w Keflavíku?</summary><p>Przewoźnik partnerski wyjeżdża z lotniska cztery razy dziennie przez cały rok: 07:30, 09:30, 12:30 i 16:30. Przejazd trwa 20 minut. Z Reykjaviku to 60 minut, przez większą część roku co godzinę, a na wyznaczonym przystanku trzeba stawić się 30 minut przed odjazdem. Jeżdżą też inni przewoźnicy; droga dojazdowa to 43, Grindavíkurvegur.</p></details><details><summary>Czy warto wpaść do Blue Lagoon w drodze na samolot?</summary><p>Tak, i to najlepszy sposób na jej wykorzystanie — ale z laguny na lotnisko jadą tylko trzy autobusy dziennie: 12:00, 14:30 i 16:00. Dlatego działa okienko poranne, które przy okazji należy do najtańszych. Tanie okienka wieczorne nie mają żadnego autobusu na lotnisko. Duży bagaż przechowuje się przy parkingu, 1000 ISK za sztukę.</p></details><details><summary>Blue Lagoon czy Sky Lagoon?</summary><p>Nie chodzi o cenę, od której zaczyna się większość porównań. Wstęp Comfort w Blue Lagoon figuruje w cenniku za 11990 ISK wobec 14990 ISK za Saman w Sky Lagoon. A odległość między najtańszą a najdroższą godziną w samej Blue Lagoon odpowiada mniej więcej odległości między obiema lagunami. Prawdziwa różnica to czas: Sky Lagoon mieści się w jednym wieczorze, Blue Lagoon zabiera pół dnia.</p></details><details><summary>Czy Blue Lagoon zamykają przez wulkan?</summary><p>Zamykali. Od grudnia 2023 do sierpnia 2025 rząd kraterów Sundhnúkur, kilka kilometrów dalej, wybuchał dziewięć razy, a laguna zamykała się w tej serii z krótkim wyprzedzeniem. 21 października 2026 roku islandzki instytut meteorologiczny nie pokazywał żadnych ostrzeżeń i podawał warunki normalne. Praktyczna zasada się nie zmienia: sprawdź status rano w dniu wizyty i nie wieszaj na lagunie ostatniego dnia wyjazdu.</p></details></div>
+
+<h2>Co dalej</h2>
+<ul>
+  <li><a href="/pl/reykjavik-self-guided-walking-tour/">Reykjavik pieszo na własną rękę</a> — trasa przystanek po przystanku i co daje audioprzewodnik</li>
+  <li><a href="/pl/lotnisko-keflavik-reykjavik/">Z lotniska Keflavík do miasta</a> — transfery, z którymi łączy się dzień w lagunie</li>
+  <li><a href="/pl/sky-lagoon/">Sky Lagoon</a> — ta, która mieści się w wieczorze</li>
+  <li><a href="/pl/jeden-dzien-w-reykjaviku/">Reykjavik w jeden dzień</a> — dzień, który inaczej zabrałaby laguna</li>
+  <li><a href="/pl/hallgrimskirkja/">Hallgrímskirkja i wieża</a> — bilety, godziny i granica 16:45</li>
+  <li><a href="/pl/zorza-polarna-reykjavik/">Zorza polarna</a> — kiedy niebo jest dość ciemne i gdzie stanąć</li>
+  <li><a href="/pl/darmowy-spacer-reykjavik/">Darmowe spacery z przewodnikiem</a> — kto je prowadzi i które wyjście wybrać</li>
+  <li><a href="/pl/">Pełny przewodnik po Reykjaviku</a> — spacer, wycieczki i pory roku</li>
+  <li><a href="/pl/przewodniki/">Wszystkie przewodniki po Reykjaviku</a></li>
+</ul>
+
+<h2>Krótko</h2>
+<p>Jedź, ale w dniu z lotem. Laguna leży 20 minut od terminalu i godzinę od miasta, więc podwieszenie jej pod przylot albo odlot nie kosztuje nic, a osobna wyprawa kosztuje pół dnia.</p>
+<p>Rezerwuj poranne okienko. Przez większość roku to jedna z najtańszych godzin, to spokojny koniec dnia, a w dniu odlotu tylko ono dociąga do autobusu na lotnisko. I licz uczciwie: z autobusem wychodzi gdzieś od 159 do 182 € od osoby, a nie 88 € ze strony z cenami.</p>
+
+<div class="final" style="margin-top:28px">
+  <h2 style="color:#fff">Dwadzieścia minut od terminalu, godzina od miasta</h2>
+  <p>Postaw lagunę na dniu z lotem, a miasto zachowa wszystkie swoje godziny. Oto jeden sposób, żeby je wydać.</p>
+  <div class="btnrow" style="justify-content:center">
+    <a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141" data-src="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141?partialView=1" style="background:#fff;color:var(--navy);border-color:#fff">Zacznij spacer — 9,99 €</a>
+    <a class="btn ghost" href="https://www.booking.com/searchresults.html?ss=Reykjavik&amp;aid=1437498" target="_blank" rel="noopener sponsored">Znajdź hotel w centrum</a>
+  </div>
+</div>
+
+<p class="disc">TouringBee wydaje samodzielny audioprzewodnik po Reykjaviku. Dlatego interesuje nas, ile godzin miejskiego pobytu zabiera wyprawa do laguny, i dlatego kładziemy rozkłady przed czytelnikiem, zamiast z nich argumentować. Część linków na tej stronie to linki partnerskie: przy rezerwacji przez nie możemy otrzymać prowizję, bez dodatkowego kosztu dla ciebie. Ceny wstępu odczytano w wyszukiwarce rezerwacji laguny 21 października 2026 roku dla sześciu osobnych terminów. Dotyczą osoby dorosłej i wstępu Comfort, zmieniają się wraz z datą i godziną i nie będą zgodne z twoimi. Czasy przejazdu, taryfy i rozkłady transferu pochodzą z tego samego procesu rezerwacji oraz z opublikowanego rozkładu przewoźnika z tego samego dnia. Zawsze sprawdzaj przed wyjazdem. Źródła: bluelagoon.com, support.bluelagoon.com, destinationbluelagoon.is, en.vedur.is.</p>
+
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="grid g4">
+      <div>
+        <h2>Odkryj</h2>
+        <ul><li><a href="/pl/blue-lagoon/">Blue Lagoon: bilety i dojazd</a></li><li><a href="/pl/zorza-polarna-reykjavik/">Zorza polarna w Reykjaviku</a></li><li><a href="/pl/hallgrimskirkja/">Hallgrímskirkja i wieża</a></li><li><a href="/pl/lotnisko-keflavik-reykjavik/">Z lotniska Keflavík do centrum</a></li><li><a href="/pl/sky-lagoon/">Sky Lagoon</a></li><li><a href="/pl/jeden-dzien-w-reykjaviku/">Jeden dzień w Reykjaviku</a></li><li><a href="/pl/darmowy-spacer-reykjavik/">Darmowe spacery z przewodnikiem</a></li><li><a href="/pl/przewodniki/">Wszystkie przewodniki</a></li></ul>
+      </div>
+      <div>
+        <h2>Audioprzewodnik</h2>
+        <ul>
+          <li><a href="/pl/reykjavik-self-guided-walking-tour/">Spacer na własną rękę</a></li>
+          <li><a href="/pl/#audio">Reykjavík City Walking Tour</a></li>
+          <li><a href="https://touringbee.com/shop-tbee/?wpam_id=40&amp;utm_source=reykjavikwalk&amp;utm_medium=referral&amp;utm_campaign=landing&amp;utm_content=footer" target="_blank" rel="noopener">Wszystkie trasy TouringBee</a></li>
+          <li><a href="https://touringbee.com/terms-and-conditions-of-use/" target="_blank" rel="noopener">Regulamin</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Informacje prawne</h2>
+        <ul>
+          <li><a href="/pl/polityka-prywatnosci/">Polityka prywatności</a></li>
+          <li><a href="/pl/informacja-o-afiliacji/">Informacja o afiliacji</a></li>
+          <li><a href="mailto:info@touringbee.com">info@touringbee.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Języki</h2>
+        <p style="margin:0"><a href="/">English</a> · <a href="/fr/">Français</a> · <a href="/de/">Deutsch</a> · <a href="/es/">Español</a> · <a href="/it/">Italiano</a> · <a href="/pt/">Português</a> · <a href="/pl/">Polski</a> · <a href="/ru/">Русский</a></p>
+      </div>
+    </div>
+    <p class="disc">reykjavikwalk.com wydaje Touringbee Limited (Irlandia, spółka nr 660321). Część linków na tej stronie to linki afiliacyjne: jeśli przez nie zarezerwujesz, dostajemy prowizję — bez dodatkowego kosztu dla ciebie. Ceny i godziny się zmieniają; przed wyjazdem zawsze sprawdź na stronie oficjalnej. Część obrazów na tej stronie to ilustracje, a nie zdjęcia przedstawianych miejsc.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="wrap">
+    <div class="txt">Reykjavík City Walking Tour — 9,99 €<small>4,6 ★ · 27 przystanków · offline · po angielsku</small></div>
+    <a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141" data-src="https://widgets.bokun.io/online-sales/5861f2ab-0e3f-4a33-a6ef-0adde2b83f67/experience/1250141?partialView=1" style="background:#fff;color:var(--navy);border-color:#fff">Kup teraz</a>
+  </div>
+</div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://reykjavikwalk.com/pl/blue-lagoon/#article","headline":"Blue Lagoon: ile naprawdę kosztuje i który dzień wyjazdu jej poświęcić","description":"Ile Blue Lagoon kosztuje naprawdę razem z autobusem, trzy powroty na lotnisko i który dzień wyjazdu jej poświęcić.","image":"https://reykjavikwalk.com/img/hero-1536.webp","datePublished":"2026-10-22","dateModified":"2026-10-22","inLanguage":"pl","author":{"@type":"Person","name":"Eugene","description":"Były przewodnik, założyciel paris10.travel, autor audioprzewodników TouringBee."},"publisher":{"@type":"Organization","name":"TouringBee","logo":{"@type":"ImageObject","url":"https://reykjavikwalk.com/img/logo.webp"}},"mainEntityOfPage":"https://reykjavikwalk.com/pl/blue-lagoon/"},{"@type":"FAQPage","@id":"https://reykjavikwalk.com/pl/blue-lagoon/#faq","mainEntity":[{"@type":"Question","name":"Ile naprawdę kosztuje Blue Lagoon?","acceptedAnswer":{"@type":"Answer","text":"Strona reklamuje wstęp Comfort od 88 €. W sześciu terminach sprawdzonych w ich własnej wyszukiwarce rezerwacji najtańsze okienko kosztowało 92 €, a najdroższe 138 € — przy dokładnie tym samym bilecie. Do tego oficjalny autobus w obie strony od 67 € od osoby: nasz koszyk dla dwojga dorosłych w sobotę pokazywał 364,56 €, czyli po 182 € na głowę. W tani dzień roboczy wychodzi bliżej 159 €."}},{"@type":"Question","name":"O której godzinie Blue Lagoon jest najtańsza?","acceptedAnswer":{"@type":"Answer","text":"We wszystkich sześciu sprawdzonych terminach najdroższą godziną dnia było 16:00 albo 17:00. Okienko o 08:00 leżało na minimum dnia albo tuż obok w pięciu terminach na sześć; wyjątkiem jest połowa lipca, gdzie minimum przenosi się na 20:00 i 21:00. Rozrzut w obrębie jednego dnia sięgał od 23 do 34 € — więcej niż skok do kolejnej kategorii biletu."}},{"@type":"Question","name":"Jak dojechać do Blue Lagoon z lotniska w Keflavíku?","acceptedAnswer":{"@type":"Answer","text":"Przewoźnik partnerski wyjeżdża z lotniska cztery razy dziennie przez cały rok: 07:30, 09:30, 12:30 i 16:30. Przejazd trwa 20 minut. Z Reykjaviku to 60 minut, przez większą część roku co godzinę, a na wyznaczonym przystanku trzeba stawić się 30 minut przed odjazdem. Jeżdżą też inni przewoźnicy; droga dojazdowa to 43, Grindavíkurvegur."}},{"@type":"Question","name":"Czy warto wpaść do Blue Lagoon w drodze na samolot?","acceptedAnswer":{"@type":"Answer","text":"Tak, i to najlepszy sposób na jej wykorzystanie — ale z laguny na lotnisko jadą tylko trzy autobusy dziennie: 12:00, 14:30 i 16:00. Dlatego działa okienko poranne, które przy okazji należy do najtańszych. Tanie okienka wieczorne nie mają żadnego autobusu na lotnisko. Duży bagaż przechowuje się przy parkingu, 1000 ISK za sztukę."}},{"@type":"Question","name":"Blue Lagoon czy Sky Lagoon?","acceptedAnswer":{"@type":"Answer","text":"Nie chodzi o cenę, od której zaczyna się większość porównań. Wstęp Comfort w Blue Lagoon figuruje w cenniku za 11990 ISK wobec 14990 ISK za Saman w Sky Lagoon. A odległość między najtańszą a najdroższą godziną w samej Blue Lagoon odpowiada mniej więcej odległości między obiema lagunami. Prawdziwa różnica to czas: Sky Lagoon mieści się w jednym wieczorze, Blue Lagoon zabiera pół dnia."}},{"@type":"Question","name":"Czy Blue Lagoon zamykają przez wulkan?","acceptedAnswer":{"@type":"Answer","text":"Zamykali. Od grudnia 2023 do sierpnia 2025 rząd kraterów Sundhnúkur, kilka kilometrów dalej, wybuchał dziewięć razy, a laguna zamykała się w tej serii z krótkim wyprzedzeniem. 21 października 2026 roku islandzki instytut meteorologiczny nie pokazywał żadnych ostrzeżeń i podawał warunki normalne. Praktyczna zasada się nie zmienia: sprawdź status rano w dniu wizyty i nie wieszaj na lagunie ostatniego dnia wyjazdu."}}]},{"@type":"BreadcrumbList","@id":"https://reykjavikwalk.com/pl/blue-lagoon/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Reykjavik pieszo, we własnym tempie","item":"https://reykjavikwalk.com/pl/"},{"@type":"ListItem","position":2,"name":"Blue Lagoon: ile naprawdę kosztuje i który dzień wyjazdu jej poświęcić","item":"https://reykjavikwalk.com/pl/blue-lagoon/"}]}]}
+</script>
+<script>(function(){var s=document.getElementById('sticky');if(!s)return;window.addEventListener('scroll',function(){s.classList.toggle('on',window.scrollY>600);},{passive:true});})();</script>
+<script>
+/* Bókun: движок грузится только после первого действия пользователя (Lighthouse его не делает),
+   а клик по кнопке/ссылке всегда открывает модалку — никакой отдельной страницы. */
+(function(){
+  var UUID='5861f2ab-0e3f-4a33-a6ef-0adde2b83f67', PID='1250141';
+  var WIDGET='https://widgets.bokun.io/online-sales/'+UUID+'/experience/'+PID;
+  /* кнопки, ссылки на товар в магазине и любые текстовые ссылки «аудиогид» (#audio).
+     data-no-widget — единственный опт-аут: запасной выход в магазин. */
+  var SEL='a.bokunButton, a[href*="/product/reykjavik-city-walking-tour"], a[href$="#audio"]';
+  var loaded=0;
+  function load(){
+    if(loaded)return; loaded=1;
+    var s=document.createElement('script'); s.async=true;
+    s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID='+UUID;
+    document.body.appendChild(s);
+  }
+  ['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){
+    window.addEventListener(e,load,{once:true,passive:true});
+  });
+  function engineReady(){
+    return typeof window.BokunWidgets==='function' && typeof window.BokunWidgets.openModal==='function';
+  }
+  document.addEventListener('click',function(ev){
+    if(ev.defaultPrevented||ev.button||ev.metaKey||ev.ctrlKey||ev.shiftKey||ev.altKey) return;
+    var el=ev.target&&ev.target.closest?ev.target.closest(SEL):null;
+    if(!el) return;
+    /* движок уже повесил свой обработчик на эту кнопку — не мешаем */
+    if(el.getAttribute('data-bokun-widget-loaded')==='true') return;
+    if(el.hasAttribute('data-no-widget')) return;
+    ev.preventDefault(); ev.stopPropagation();
+    el.classList.add('is-bokun-loading');
+    load();
+    var t0=Date.now();
+    (function poll(){
+      if(engineReady()){
+        el.classList.remove('is-bokun-loading');
+        window.BokunWidgets.openModal({src:WIDGET+'?isModal=true',openFrom:'bookingButton',buttonId:el.id||''});
+        return;
+      }
+      if(Date.now()-t0>8000){  /* движок не поднялся: не бросаем пользователя, уводим в новую вкладку */
+        el.classList.remove('is-bokun-loading');
+        window.open(el.getAttribute('href'),'_blank','noopener');
+        return;
+      }
+      setTimeout(poll,100);
+    })();
+  },true);
+})();
+</script>
+</body>
+</html>
