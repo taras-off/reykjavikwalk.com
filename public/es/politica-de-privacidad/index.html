@@ -306,7 +306,7 @@ footer li{margin-bottom:8px}
     (function poll(){
       if(engineReady()){
         el.classList.remove('is-bokun-loading');
-        window.BokunWidgets.openModal({src:WIDGET+'?isModal=true',openFrom:'bookingButton',buttonId:el.id||''});
+        window.BokunWidgets.openModal({src:WIDGET+'?lang=es&isModal=true',openFrom:'bookingButton',buttonId:el.id||''});
         return;
       }
       if(Date.now()-t0>8000){  /* движок не поднялся: не бросаем пользователя, уводим в новую вкладку */
